@@ -1,0 +1,56 @@
+name: Data Pipeline
+
+on:
+  schedule:
+    # SOURCE CADENCE: annual. The ATO publishes the Report of Entity Tax
+    # Information once a year, in late October or early November (the 2023-24
+    # report was published 2 October 2025). A yearly cron on 8 November catches
+    # it, and the run is a cheap no-op the rest of the time.
+    - cron: '41 19 8 11 *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['pipeline/**']
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # `npm install`, not `npm ci` — the pipeline package is deliberately
+      # lockfile-light and `ci` fails on CI when the lockfile drifts.
+      - run: npm install --no-audit --no-fund
+        working-directory: pipeline
+      - run: node pipeline/collect.mjs
+
+      - name: Commit data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update ATO corporate tax data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A push made with GITHUB_TOKEN does NOT trigger `deploy.yml` — GitHub
+      # suppresses workflow runs triggered by the default token to prevent
+      # recursion. Without this explicit dispatch the data job goes green, the
+      # commit lands on main, and the live site never changes. Never rely on the
+      # push alone, and never diagnose this by looking at the job status.
+      - name: Dispatch the deploy workflow
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main -R "$GITHUB_REPOSITORY"

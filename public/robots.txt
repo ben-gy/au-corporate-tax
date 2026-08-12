@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://au-corporate-tax.benrichardson.dev/sitemap.xml

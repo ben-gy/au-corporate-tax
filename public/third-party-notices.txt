@@ -1,0 +1,42 @@
+Corporate Tax Transparency — third-party notices
+================================================
+
+This site's own code is licensed under the GNU Affero General Public License
+v3.0 or later, with an attribution requirement added under section 7(b).
+Source: https://au-corporate-tax.benrichardson.dev/
+
+WHAT SHIPS TO YOUR BROWSER
+--------------------------
+Nothing third-party. The production bundle contains only first-party code —
+no charting library, no mapping library, no framework. Charts are hand-rolled
+SVG. Fonts come from your operating system, so no font files are distributed.
+
+BUILD AND PIPELINE DEPENDENCIES (not distributed with this site)
+---------------------------------------------------------------
+Vite                    MIT
+TypeScript              Apache-2.0
+Vitest                  MIT
+jsdom                   MIT
+@types/node             MIT
+SheetJS xlsx            Apache-2.0   (reads the ATO workbooks in the data pipeline)
+
+HOSTED SCRIPTS LOADED AT RUNTIME
+--------------------------------
+Cloudflare Web Analytics   static.cloudflareinsights.com/beacon.min.js
+                           Cookie-less, anonymous page-view counts.
+Feedback widget            feedback.benrichardson.dev/w.js
+
+DATA
+----
+Corporate tax figures: Australian Taxation Office, "Corporate Tax Transparency —
+Report of Entity Tax Information", 2013-14 to 2023-24, via data.gov.au.
+Licensed Creative Commons Attribution 3.0 Australia (CC BY 3.0 AU).
+https://data.gov.au/data/dataset/corporate-transparency
+
+That licence requires attribution, and the requirement runs with the data
+regardless of the code licence. It must not be removed from any copy.
+
+Cross-checking aggregates are quoted from the ATO's own "Corporate tax
+transparency report" commentary pages on ato.gov.au.
+
+The ATO does not endorse this site and is not affiliated with it.

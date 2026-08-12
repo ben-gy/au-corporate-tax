@@ -1,0 +1,394 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+   Copyright (C) 2026 Ben Richardson */
+
+/* MANDATORY — the [hidden] guard, first, ahead of every component rule.
+
+   An author rule like `.modal-wrap{display:grid}` OUTRANKS the browser's
+   `[hidden]{display:none}` — author origin beats the UA stylesheet regardless of
+   specificity. So any element hidden with the `hidden` ATTRIBUTE that a class
+   also gives a `display` is never actually hidden: it renders from first paint,
+   sits over the page at its own z-index, and `el.hidden = true` in JavaScript
+   does nothing at all. That shipped a completely unusable site once — an About
+   modal open on load that could not be dismissed by its close button, its
+   scrim, or Escape, while all three handlers fired correctly every time. */
+[hidden] { display: none !important; }
+
+:root {
+  /* Financial-press palette: warm paper, deep ink, brass for tax paid and clay
+     for nil. The audience is split between researchers and people arriving from
+     a news headline, so this reads as a serious reference rather than either a
+     monitoring terminal or a campaign site. */
+  --bg-base: #fcfbf8;
+  --bg-surface: #f4f1ea;
+  --bg-elevated: #ece7dc;
+  --bg-panel: #ffffff;
+  --bg-hover: #f0ece2;
+  --bg-active: #e3ddcd;
+
+  --border-subtle: #e6e0d3;
+  --border-default: #cdc5b4;
+  --border-strong: #9c927e;
+
+  /* Every one of these is used as body text somewhere, so every one must clear
+     WCAG AA (4.5:1) against both --bg-base and --bg-surface. The two lightest
+     were originally #8a8f98 and #b3b7bd — 2.9:1 and 2.1:1 on the stat tiles,
+     which is where the caveat text under every headline number lives. */
+  --text-primary: #1b1f27;
+  --text-secondary: #565b63;
+  --text-tertiary: #666b74;
+  --text-muted: #666b74;
+
+  --accent-primary: #1d2b3a;
+  --accent-primary-hover: #2c4157;
+  --accent-secondary: #8a6212;
+  --accent-brass: #b1841f;
+  --accent-clay: #a8452f;
+  --accent-ink: #34506b;
+
+  /* Semantic: brass = tax paid, clay = nil. Used identically in every view. */
+  --paid: #b1841f;
+  --paid-deep: #7d5c11;
+  --nil: #a8452f;
+  --income: #34506b;
+  --taxable: #5d7f9c;
+
+  --status-good: #2f6d4f;
+  --status-warn: #a26a12;
+  --status-bad: #a8452f;
+  --status-info: #34506b;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Helvetica, Arial, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  --font-size-xs: 0.6875rem;
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.875rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.125rem;
+  --font-size-2xl: 1.5rem;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  --header-h: 52px;
+
+  /* This site ships no map, but the overlay stack is kept above 1000 anyway so
+     that adding one later cannot silently paint Leaflet's panes over a modal. */
+  --z-nav: 300;
+  --z-scrim: 2000;
+  --z-panel: 2100;
+  --z-modal: 2200;
+  --z-tip: 2400;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background: var(--bg-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* `clip`, never `hidden` — `overflow-x: hidden` on the body silently kills
+     `position: sticky` on every descendant, including the site header. */
+  overflow-x: clip;
+}
+
+#app { min-height: 100vh; display: flex; flex-direction: column; }
+.main-content { flex: 1 0 auto; width: 100%; max-width: 1680px; margin: 0 auto; padding: var(--space-xl) var(--space-lg) var(--space-2xl); }
+.site-footer { flex-shrink: 0; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: var(--z-nav);
+  background: var(--accent-primary); color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.header-inner {
+  max-width: 1680px; margin: 0 auto;
+  min-height: var(--header-h);
+  display: flex; align-items: center; gap: var(--space-lg);
+  padding: 0 var(--space-lg);
+}
+.brand { display: flex; align-items: baseline; gap: var(--space-sm); min-width: 0; }
+.brand h1 { font-size: var(--font-size-lg); font-weight: 650; letter-spacing: -0.01em; white-space: nowrap; }
+.brand .brand-sub { font-size: var(--font-size-xs); color: rgba(255, 255, 255, 0.72); white-space: nowrap; }
+.header-spacer { flex: 1 1 auto; }
+.header-actions { display: flex; align-items: center; gap: var(--space-xs); flex-shrink: 0; }
+.icon-btn {
+  appearance: none; background: rgba(255, 255, 255, 0.12); color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.24); border-radius: var(--radius-sm);
+  min-width: 44px; min-height: 34px; padding: 0 var(--space-sm);
+  font-family: inherit; font-size: var(--font-size-sm); font-weight: 600; cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.icon-btn:hover { background: rgba(255, 255, 255, 0.24); }
+
+/* ---------- Nav tabs — WORDS ONLY, never count badges ---------- */
+.site-nav { background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle); position: sticky; top: var(--header-h); z-index: calc(var(--z-nav) - 1); }
+.nav-inner { max-width: 1680px; margin: 0 auto; display: flex; gap: 2px; padding: 0 var(--space-sm); overflow-x: auto; scrollbar-width: thin; }
+.nav-tab {
+  appearance: none; background: none; border: none; border-bottom: 2.5px solid transparent;
+  color: var(--text-secondary); font-family: inherit; font-size: var(--font-size-base);
+  font-weight: 550; padding: var(--space-md) var(--space-lg); cursor: pointer; white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.nav-tab:hover { color: var(--accent-primary); background: var(--bg-hover); }
+.nav-tab[aria-current='page'] { color: var(--accent-primary); border-bottom-color: var(--accent-brass); }
+
+/* ---------- Typography / view chrome ---------- */
+.view-head { margin-bottom: var(--space-xl); max-width: 82ch; }
+.view-head h2 { font-size: var(--font-size-2xl); letter-spacing: -0.015em; margin-bottom: var(--space-xs); }
+.view-head p { color: var(--text-secondary); }
+.section-title { font-size: var(--font-size-lg); font-weight: 650; margin-bottom: var(--space-xs); }
+.section-sub { font-size: var(--font-size-sm); color: var(--text-secondary); margin-bottom: var(--space-md); max-width: 84ch; }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+.panel { background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: var(--space-lg); }
+.panel + .panel { margin-top: var(--space-lg); }
+
+/* Wide-by-nature content scrolls inside its own box so the PAGE never scrolls
+   sideways at 375px. */
+.scroller { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* ---------- Stat tiles ---------- */
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl); }
+.stat { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: var(--space-md) var(--space-lg); min-width: 0; }
+.stat .stat-value { font-family: var(--font-mono); font-size: 1.45rem; font-weight: 620; letter-spacing: -0.02em; color: var(--accent-primary); }
+.stat .stat-label { font-size: var(--font-size-xs); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+.stat .stat-note { font-size: var(--font-size-xs); color: var(--text-tertiary); margin-top: var(--space-xs); }
+.stat.is-paid .stat-value { color: var(--paid-deep); }
+.stat.is-nil .stat-value { color: var(--nil); }
+
+/* ---------- Tables ---------- */
+table.data { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm); }
+table.data th, table.data td { padding: 7px var(--space-md); text-align: left; border-bottom: 1px solid var(--border-subtle); white-space: nowrap; }
+table.data th {
+  position: sticky; top: 0; z-index: 2; background: var(--bg-elevated);
+  font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--text-secondary); font-weight: 650; user-select: none;
+}
+/* Sorting is a real button inside the th, not a click handler on the th: a bare
+   <th> is not focusable and has no keyboard activation, which made sorting the
+   6,000-row table — the primary interaction of the landing view — unreachable
+   without a mouse. */
+table.data th .th-sort {
+  appearance: none; background: none; border: none; padding: 0;
+  font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit;
+  cursor: pointer; width: 100%; text-align: inherit;
+}
+table.data th.n .th-sort { text-align: right; }
+table.data th .th-sort:hover { color: var(--accent-primary); }
+table.data th.sorted, table.data th.sorted .th-sort { color: var(--accent-primary); }
+table.data th.sorted .th-sort::after { content: attr(data-arrow); margin-left: 4px; }
+table.data td.n, table.data th.n { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+table.data tbody tr:nth-child(even) { background: var(--bg-surface); }
+table.data tbody tr:hover { background: var(--bg-hover); }
+table.data tbody tr.clickable { cursor: pointer; }
+table.data td.name-cell { white-space: normal; min-width: 220px; max-width: 420px; }
+.cell-nil { color: var(--nil); font-style: italic; }
+
+/* ---------- Controls ---------- */
+.controls { display: flex; flex-wrap: wrap; gap: var(--space-sm); align-items: center; margin-bottom: var(--space-lg); }
+.control-group { display: flex; align-items: center; gap: var(--space-xs); flex-wrap: wrap; min-width: 0; }
+.control-label { font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-weight: 600; }
+select, input[type='search'], input[type='text'] {
+  font-family: inherit; font-size: var(--font-size-sm); color: var(--text-primary);
+  background: var(--bg-panel); border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm); padding: 6px var(--space-sm); min-height: 34px; max-width: 100%;
+}
+input[type='search'] { min-width: min(300px, 100%); }
+select:focus-visible, input:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+.nav-tab:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent-brass); outline-offset: 2px;
+}
+.seg { display: inline-flex; border: 1px solid var(--border-default); border-radius: var(--radius-sm); overflow: hidden; max-width: 100%; }
+.seg button {
+  appearance: none; background: var(--bg-panel); border: none; border-right: 1px solid var(--border-default);
+  font-family: inherit; font-size: var(--font-size-sm); color: var(--text-secondary);
+  padding: 7px var(--space-md); min-height: 34px; cursor: pointer; white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.seg button:last-child { border-right: none; }
+.seg button:hover { background: var(--bg-hover); }
+.seg button[aria-pressed='true'] { background: var(--accent-primary); color: #fff; }
+
+input[type='range'] { accent-color: var(--accent-brass); width: 100%; max-width: 460px; min-width: 0; }
+
+/* ---------- Charts ---------- */
+.chart-wrap { position: relative; width: 100%; }
+svg.chart { display: block; width: 100%; height: auto; overflow: visible; }
+svg.chart text { font-family: var(--font-sans); fill: var(--text-secondary); }
+.axis line, .axis path { stroke: var(--border-default); shape-rendering: crispEdges; }
+.gridline { stroke: var(--border-subtle); shape-rendering: crispEdges; }
+.bar { transition: opacity var(--transition-fast); cursor: pointer; }
+.bar:hover { opacity: 0.82; }
+.dimmed { opacity: 0.15; }
+.mark { cursor: pointer; }
+.chart-title { font-size: var(--font-size-lg); font-weight: 650; margin-bottom: 2px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-md); font-size: var(--font-size-xs); color: var(--text-secondary); }
+.legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.legend-swatch { width: 13px; height: 13px; border-radius: 3px; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.12); }
+.legend-item.clickable { cursor: pointer; padding: 2px 4px; border-radius: var(--radius-sm); }
+.legend-item.clickable:hover { color: var(--accent-primary); background: var(--bg-hover); }
+.legend-item[aria-pressed='true'] { color: var(--accent-primary); font-weight: 650; background: var(--bg-active); }
+
+/* ---------- Global [data-tip] tooltip ----------
+   `.hover-tip.visible` is NOT optional: initTooltip() shows and hides purely by
+   toggling that class, so a stylesheet defining only `.hover-tip` paints the
+   tooltip on first hover and never hides it again — it just follows the pointer
+   around the page forever, covering whatever is beneath it. */
+.hover-tip {
+  position: fixed; z-index: var(--z-tip); pointer-events: none;
+  background: #1b1f27; color: #fff; font-size: var(--font-size-sm); line-height: 1.4;
+  padding: 7px 10px; border-radius: var(--radius-sm); max-width: 320px;
+  box-shadow: 0 6px 22px rgba(27, 31, 39, 0.28); white-space: pre-line;
+  opacity: 0; transition: opacity 110ms ease;
+}
+.hover-tip.visible { opacity: 1; }
+
+/* ---------- Glossary popover ---------- */
+/* A real <button>, not a styled span. The glossary is the whole explanatory
+   layer of this site, and a span with a click handler is not in the tab order
+   and does not respond to Enter or Space — so a keyboard or screen-reader user
+   could not open a single definition. */
+.glossary-link {
+  appearance: none; background: none; border: none; padding: 0;
+  font: inherit; color: inherit; text-align: inherit;
+  border-bottom: 1px dotted var(--accent-secondary); cursor: help;
+}
+.glossary-link::after { content: 'ⓘ'; font-size: 0.78em; color: var(--accent-secondary); margin-left: 2px; vertical-align: super; }
+.glossary-pop {
+  position: fixed; z-index: var(--z-tip); max-width: min(360px, calc(100vw - 24px));
+  background: var(--bg-panel); color: var(--text-primary);
+  border: 1px solid var(--border-default); border-radius: var(--radius-md);
+  padding: var(--space-md); box-shadow: 0 10px 34px rgba(27, 31, 39, 0.2);
+  font-size: var(--font-size-sm);
+}
+.glossary-pop h4 { font-size: var(--font-size-base); margin-bottom: var(--space-xs); color: var(--accent-primary); }
+
+/* ---------- Overlays: scrim, modal, drill-down drawer ---------- */
+.scrim { position: fixed; inset: 0; z-index: var(--z-scrim); background: rgba(27, 31, 39, 0.45); }
+.modal {
+  position: fixed; z-index: var(--z-modal);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: min(720px, calc(100vw - 24px)); max-height: min(84vh, 780px); overflow-y: auto;
+  background: var(--bg-panel); border-radius: var(--radius-lg);
+  box-shadow: 0 24px 64px rgba(27, 31, 39, 0.32);
+  padding: var(--space-xl);
+}
+.modal h3 { font-size: var(--font-size-xl); margin-bottom: var(--space-md); padding-right: 52px; }
+.modal h4 { font-size: var(--font-size-base); margin: var(--space-lg) 0 var(--space-xs); color: var(--accent-primary); }
+.modal p, .modal li { color: var(--text-secondary); margin-bottom: var(--space-sm); }
+.modal ul { padding-left: var(--space-xl); }
+.modal a { color: var(--accent-secondary); }
+
+/* The close control needs a real 44x44 hit area and must sit INSIDE the overlay
+   bounds — never positioned outside it. */
+.close-btn {
+  position: absolute; top: 10px; right: 10px;
+  appearance: none; background: var(--bg-elevated); border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm); width: 44px; height: 44px;
+  font-size: 1.15rem; line-height: 1; color: var(--text-secondary); cursor: pointer;
+}
+.close-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+
+.drawer {
+  position: fixed; z-index: var(--z-panel); top: 0; right: 0; bottom: 0;
+  width: min(600px, 100vw); background: var(--bg-panel);
+  box-shadow: -12px 0 40px rgba(27, 31, 39, 0.22);
+  overflow-y: auto; padding: var(--space-xl);
+}
+.drawer h3 { font-size: var(--font-size-xl); padding-right: 52px; margin-bottom: var(--space-xs); line-height: 1.25; }
+.drawer .drawer-sub { color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-lg); }
+.kv { display: grid; grid-template-columns: 1fr auto; gap: 5px var(--space-md); font-size: var(--font-size-sm); }
+.kv dt { color: var(--text-secondary); min-width: 0; }
+.kv dd { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+
+.sector-pill {
+  display: inline-block; font-size: var(--font-size-xs); border-radius: 999px;
+  padding: 2px 9px; color: #fff; white-space: nowrap;
+}
+
+/* ---------- Streak grid (Nil view) ---------- */
+/* The row is name-on-the-left, eleven cells-on-the-right. Left unbounded it
+   inherits the 1680px content column, which strands each company name about
+   1,200px from its own cells on a wide screen and makes the grid unreadable —
+   you cannot track a row across that much empty space. The cap keeps the pair
+   within one eye movement; below it the row is simply 100% wide. */
+.streak-grid { display: grid; gap: 2px; max-width: 760px; }
+.streak-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-md); align-items: center; }
+.streak-name { font-size: var(--font-size-sm); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+.streak-name:hover { color: var(--accent-secondary); text-decoration: underline; }
+.streak-cells { display: flex; gap: 2px; flex-shrink: 0; }
+.streak-cell {
+  appearance: none; border: none; padding: 0;
+  width: 15px; height: 15px; border-radius: 2px; background: var(--bg-elevated); cursor: pointer;
+}
+.streak-cell.is-nil { background: var(--nil); }
+.streak-cell.is-paid { background: var(--paid); }
+.streak-cell.is-absent { background: transparent; border: 1px dashed var(--border-default); cursor: default; }
+
+/* ---------- Misc ---------- */
+.loading, .error-state, .empty-state { padding: var(--space-2xl); text-align: center; color: var(--text-secondary); }
+.error-state { color: var(--status-bad); }
+.skeleton { background: linear-gradient(90deg, var(--bg-elevated) 25%, var(--bg-hover) 37%, var(--bg-elevated) 63%); background-size: 400% 100%; animation: shimmer 1.4s ease infinite; border-radius: var(--radius-sm); height: 260px; }
+@keyframes shimmer { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+.callout { border-left: 3px solid var(--accent-brass); background: var(--bg-surface); padding: var(--space-md) var(--space-lg); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: var(--space-lg); font-size: var(--font-size-sm); color: var(--text-secondary); }
+.callout strong { color: var(--text-primary); }
+.callout.warn { border-left-color: var(--nil); }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-md); }
+.chip { font-size: var(--font-size-xs); background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: 999px; padding: 3px 10px; color: var(--text-secondary); }
+
+.svg-zoom-controls { position: absolute; top: 8px; right: 8px; display: flex; flex-direction: column; gap: 4px; z-index: 5; }
+.svg-zoom-controls button {
+  width: 32px; height: 32px; border: 1px solid var(--border-default); background: var(--bg-panel);
+  border-radius: var(--radius-sm); cursor: pointer; font-size: var(--font-size-lg); line-height: 1; color: var(--text-secondary);
+}
+.svg-zoom-controls button:hover { background: var(--bg-hover); }
+
+.link-btn {
+  appearance: none; background: none; border: none; padding: 0;
+  font: inherit; color: var(--accent-secondary); cursor: pointer; text-align: left;
+}
+.link-btn:hover { text-decoration: underline; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--bg-surface); border-top: 1px solid var(--border-subtle); padding: var(--space-xl) var(--space-lg); }
+.footer-inner { max-width: 1680px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-xl); align-items: baseline; font-size: var(--font-size-sm); color: var(--text-secondary); }
+.site-footer a { color: var(--accent-secondary); }
+.footer-src { flex: 1 1 400px; min-width: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .main-content { padding: var(--space-lg) var(--space-md) var(--space-2xl); }
+  .view-head h2 { font-size: 1.28rem; }
+}
+@media (max-width: 560px) {
+  .brand .brand-sub { display: none; }
+  .nav-tab { padding: var(--space-md) var(--space-md); font-size: var(--font-size-sm); }
+  .stat .stat-value { font-size: 1.22rem; }
+  .modal { padding: var(--space-lg); }
+  .drawer { padding: var(--space-lg); }
+  .streak-cell { width: 11px; height: 11px; }
+  .streak-name { font-size: var(--font-size-xs); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

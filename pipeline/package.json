@@ -1,0 +1,10 @@
+{
+  "name": "au-corporate-tax-pipeline",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}

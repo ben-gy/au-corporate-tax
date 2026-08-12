@@ -1,0 +1,2825 @@
+{
+ "generated": "2026-08-12T13:21:32.446Z",
+ "latestYear": "2023-24",
+ "years": [
+  "2013-14",
+  "2014-15",
+  "2015-16",
+  "2016-17",
+  "2017-18",
+  "2018-19",
+  "2019-20",
+  "2020-21",
+  "2021-22",
+  "2022-23",
+  "2023-24"
+ ],
+ "thresholdChangeYear": "2022-23",
+ "stableThreshold": 200000000,
+ "entityCount": 6158,
+ "rowCount": 28661,
+ "blankAbnRows": 240,
+ "priorYearAmendments": 552,
+ "sectors": [
+  {
+   "id": "mining",
+   "label": "Mining & resources",
+   "colour": "#8a5a2b"
+  },
+  {
+   "id": "energy",
+   "label": "Oil, gas & energy",
+   "colour": "#a06925"
+  },
+  {
+   "id": "banking",
+   "label": "Banking & finance",
+   "colour": "#1f5673"
+  },
+  {
+   "id": "insurance",
+   "label": "Insurance & super",
+   "colour": "#367d94"
+  },
+  {
+   "id": "property",
+   "label": "Property & construction",
+   "colour": "#7c6a4e"
+  },
+  {
+   "id": "retail",
+   "label": "Retail & consumer goods",
+   "colour": "#a6483f"
+  },
+  {
+   "id": "health",
+   "label": "Health & pharmaceuticals",
+   "colour": "#2f7a5b"
+  },
+  {
+   "id": "transport",
+   "label": "Transport & logistics",
+   "colour": "#4a6fa5"
+  },
+  {
+   "id": "tech",
+   "label": "Technology & telecoms",
+   "colour": "#5d5099"
+  },
+  {
+   "id": "media",
+   "label": "Media & entertainment",
+   "colour": "#96477f"
+  },
+  {
+   "id": "manufacturing",
+   "label": "Manufacturing & industrial",
+   "colour": "#6b6b6b"
+  },
+  {
+   "id": "agriculture",
+   "label": "Agriculture & food",
+   "colour": "#637d37"
+  },
+  {
+   "id": "motor",
+   "label": "Motor vehicles",
+   "colour": "#976c3d"
+  },
+  {
+   "id": "utilities",
+   "label": "Utilities & waste",
+   "colour": "#3f7f7f"
+  },
+  {
+   "id": "hospitality",
+   "label": "Hospitality & gaming",
+   "colour": "#a05c7b"
+  },
+  {
+   "id": "services",
+   "label": "Business services",
+   "colour": "#737749"
+  },
+  {
+   "id": "education",
+   "label": "Education",
+   "colour": "#477a9e"
+  },
+  {
+   "id": "other",
+   "label": "Unclassified",
+   "colour": "#b9b3a7"
+  }
+ ],
+ "sectorCoverage": {
+  "entityShare": 0.39330951607664827,
+  "payableShare": 0.8483263869233935
+ },
+ "totals": [
+  {
+   "year": "2013-14",
+   "entities": 1909,
+   "total": 1794273471636,
+   "taxable": 178792756763,
+   "payable": 42061201940,
+   "nil": 705,
+   "stableEntities": 1354,
+   "stableNil": 478,
+   "stablePayable": 40831651777,
+   "stableTaxable": 173543221429
+  },
+  {
+   "year": "2014-15",
+   "entities": 1984,
+   "total": 1811596028961,
+   "taxable": 170304628661,
+   "payable": 42258363948.58,
+   "nil": 730,
+   "stableEntities": 1397,
+   "stableNil": 494,
+   "stablePayable": 40844142003.58,
+   "stableTaxable": 164502953800
+  },
+  {
+   "year": "2015-16",
+   "entities": 2095,
+   "total": 1828090584730,
+   "taxable": 176478875470,
+   "payable": 38284588804,
+   "nil": 769,
+   "stableEntities": 1470,
+   "stableNil": 520,
+   "stablePayable": 36874504265,
+   "stableTaxable": 170387303330
+  },
+  {
+   "year": "2016-17",
+   "entities": 2146,
+   "total": 1858856325138,
+   "taxable": 186386211110,
+   "payable": 45766404469.22,
+   "nil": 742,
+   "stableEntities": 1498,
+   "stableNil": 507,
+   "stablePayable": 44223059628.22,
+   "stableTaxable": 179575795256
+  },
+  {
+   "year": "2017-18",
+   "entities": 2254,
+   "total": 2013156710047,
+   "taxable": 219893395418,
+   "payable": 52436657711,
+   "nil": 736,
+   "stableEntities": 1599,
+   "stableNil": 512,
+   "stablePayable": 50689218151,
+   "stableTaxable": 212706277397
+  },
+  {
+   "year": "2018-19",
+   "entities": 2375,
+   "total": 2157469143610,
+   "taxable": 232473401950,
+   "payable": 56518372845,
+   "nil": 778,
+   "stableEntities": 1703,
+   "stableNil": 530,
+   "stablePayable": 54880584145,
+   "stableTaxable": 225736081433
+  },
+  {
+   "year": "2019-20",
+   "entities": 2421,
+   "total": 2204340521534,
+   "taxable": 232147515411,
+   "payable": 57524154599,
+   "nil": 815,
+   "stableEntities": 1732,
+   "stableNil": 544,
+   "stablePayable": 55823485304,
+   "stableTaxable": 225731019309
+  },
+  {
+   "year": "2020-21",
+   "entities": 2527,
+   "total": 2316482522407,
+   "taxable": 287165503735,
+   "payable": 68794416429,
+   "nil": 801,
+   "stableEntities": 1806,
+   "stableNil": 541,
+   "stablePayable": 66818166800,
+   "stableTaxable": 279437250760
+  },
+  {
+   "year": "2021-22",
+   "entities": 2776,
+   "total": 2570119269538,
+   "taxable": 361530414915,
+   "payable": 84315487737,
+   "nil": 868,
+   "stableEntities": 2018,
+   "stableNil": 606,
+   "stablePayable": 81883744435,
+   "stableTaxable": 352189541113
+  },
+  {
+   "year": "2022-23",
+   "entities": 4064,
+   "total": 3160461363007,
+   "taxable": 404952605483,
+   "payable": 98260856810,
+   "nil": 1284,
+   "stableEntities": 2203,
+   "stableNil": 699,
+   "stablePayable": 93502730318,
+   "stableTaxable": 384623394908
+  },
+  {
+   "year": "2023-24",
+   "entities": 4110,
+   "total": 3278774803169,
+   "taxable": 394168550908,
+   "payable": 95704668472,
+   "nil": 1136,
+   "stableEntities": 2259,
+   "stableNil": 633,
+   "stablePayable": 90403301386,
+   "stableTaxable": 372526342635
+  }
+ ],
+ "nilStreaks": [
+  {
+   "key": "a:54100686226",
+   "name": "VIRGIN AUSTRALIA HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 53727866591
+  },
+  {
+   "key": "a:76096304620",
+   "name": "TPG TELECOM LIMITED",
+   "years": 11,
+   "totalIncome": 46853577537
+  },
+  {
+   "key": "a:62000017372",
+   "name": "AMCOR PTY LTD",
+   "years": 11,
+   "totalIncome": 37462873889
+  },
+  {
+   "key": "a:30004116223",
+   "name": "FORD MOTOR COMPANY OF AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 37024614047
+  },
+  {
+   "key": "a:86136533741",
+   "name": "NBN CO LIMITED",
+   "years": 11,
+   "totalIncome": 33756932109
+  },
+  {
+   "key": "a:86098143429",
+   "name": "TRANSURBAN HOLDINGS LIMITED",
+   "years": 11,
+   "totalIncome": 27987321504
+  },
+  {
+   "key": "a:17128762318",
+   "name": "RTA HOLDCO AUSTRALIA 1 PTY LTD",
+   "years": 11,
+   "totalIncome": 25243516390
+  },
+  {
+   "key": "a:32105197028",
+   "name": "NEWS AUSTRALIA HOLDINGS PTY LIMITED",
+   "years": 11,
+   "totalIncome": 24852689984
+  },
+  {
+   "key": "a:23003502654",
+   "name": "NEW ZEALAND MILK (AUSTRALASIA) PTY LTD",
+   "years": 11,
+   "totalIncome": 22634460381
+  },
+  {
+   "key": "a:61100364234",
+   "name": "BPIH PTY LIMITED",
+   "years": 11,
+   "totalIncome": 18370821116
+  },
+  {
+   "key": "a:70105041209",
+   "name": "INTERNATIONAL POWER (AUSTRALIA) HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 17725186404
+  },
+  {
+   "key": "a:80000159651",
+   "name": "MUNICH HOLDINGS OF AUSTRALASIA PTY LTD",
+   "years": 11,
+   "totalIncome": 16208370912
+  },
+  {
+   "key": "a:90009763526",
+   "name": "MUNCHENER RUCKVERSICHERUNGS GESELLSCHAFT",
+   "years": 11,
+   "totalIncome": 15141579273
+  },
+  {
+   "key": "a:65003371239",
+   "name": "NTT AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 14084239910
+  },
+  {
+   "key": "a:33108058331",
+   "name": "AVENG AUSTRALIA HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 13250919057
+  },
+  {
+   "key": "a:37091323312",
+   "name": "NUFARM LIMITED",
+   "years": 11,
+   "totalIncome": 13066566055
+  },
+  {
+   "key": "a:56136468007",
+   "name": "BANPU AUSTRALIA CO. PTY LTD",
+   "years": 11,
+   "totalIncome": 12833385362
+  },
+  {
+   "key": "a:63061583533",
+   "name": "PAPER AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 12736254201
+  },
+  {
+   "key": "a:87107652817",
+   "name": "CITIC RESOURCES AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 12370246559
+  },
+  {
+   "key": "a:90010061935",
+   "name": "BOYNE SMELTERS LIMITED",
+   "years": 11,
+   "totalIncome": 12102567469
+  },
+  {
+   "key": "a:95009211474",
+   "name": "PERENTI LIMITED",
+   "years": 11,
+   "totalIncome": 11844116906
+  },
+  {
+   "key": "a:98009725044",
+   "name": "QUEENSLAND ALUMINA LIMITED",
+   "years": 11,
+   "totalIncome": 10889499678
+  },
+  {
+   "key": "a:87001548401",
+   "name": "NH FOODS AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 10532088233
+  },
+  {
+   "key": "a:20071125507",
+   "name": "RGA AUSTRALIAN HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 9867820869
+  },
+  {
+   "key": "a:68070871831",
+   "name": "KARARA MINING LIMITED",
+   "years": 11,
+   "totalIncome": 9556963503
+  },
+  {
+   "key": "a:75081455754",
+   "name": "AUSTRALIAN RAIL TRACK CORPORATION LIMITED",
+   "years": 11,
+   "totalIncome": 9554438389
+  },
+  {
+   "key": "a:44004060833",
+   "name": "ROYAL AUTOMOBILE CLUB OF VICTORIA (RACV) LIMITED",
+   "years": 11,
+   "totalIncome": 8310107432
+  },
+  {
+   "key": "a:27136262952",
+   "name": "FREQUENCY INFRASTRUCTURE AUSTRALIA HOLDINGS PTY LIMITED",
+   "years": 11,
+   "totalIncome": 7332732511
+  },
+  {
+   "key": "a:14081327068",
+   "name": "TEN NETWORK HOLDINGS LIMITED",
+   "years": 11,
+   "totalIncome": 7270823370
+  },
+  {
+   "key": "a:18105742916",
+   "name": "QATAR AIRWAYS GROUP (Q.C.S.C)",
+   "years": 11,
+   "totalIncome": 6870047490
+  },
+  {
+   "key": "a:67096412752",
+   "name": "BM ALLIANCE COAL OPERATIONS PTY LTD",
+   "years": 11,
+   "totalIncome": 6777142052
+  },
+  {
+   "key": "a:16003678484",
+   "name": "PERNOD RICARD PACIFIC HOLDING PTY LTD",
+   "years": 11,
+   "totalIncome": 6680204997
+  },
+  {
+   "key": "a:81001215069",
+   "name": "WALKER GROUP HOLDINGS PTY LIMITED",
+   "years": 11,
+   "totalIncome": 6667663337
+  },
+  {
+   "key": "a:56010487939",
+   "name": "CLERMONT COAL MINES LIMITED",
+   "years": 11,
+   "totalIncome": 6554459366
+  },
+  {
+   "key": "a:15010892270",
+   "name": "AUSTRALIAN AGRICULTURAL COMPANY LIMITED",
+   "years": 11,
+   "totalIncome": 6104993545
+  },
+  {
+   "key": "a:76108617483",
+   "name": "BABCOCK & BROWN INTERNATIONAL PTY LTD",
+   "years": 11,
+   "totalIncome": 6079515852
+  },
+  {
+   "key": "a:89112188815",
+   "name": "EMECO HOLDINGS LIMITED",
+   "years": 11,
+   "totalIncome": 5756593823
+  },
+  {
+   "key": "a:80009663414",
+   "name": "RACQ OPERATIONS PTY LTD",
+   "years": 11,
+   "totalIncome": 5615483062
+  },
+  {
+   "key": "a:78004213692",
+   "name": "CAPRAL LIMITED",
+   "years": 11,
+   "totalIncome": 5254470460
+  },
+  {
+   "key": "a:12057463671",
+   "name": "MACKAY SUGAR LIMITED",
+   "years": 11,
+   "totalIncome": 5198251727
+  },
+  {
+   "key": "a:51082944821",
+   "name": "JAMES HARDIE RESEARCH (HOLDINGS) PTY LIMITED",
+   "years": 11,
+   "totalIncome": 5197502100
+  },
+  {
+   "key": "a:70003773411",
+   "name": "WARNER BROS. ENTERTAINMENT AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 4926167374
+  },
+  {
+   "key": "a:38108779782",
+   "name": "SILVER LAKE RESOURCES LIMITED",
+   "years": 11,
+   "totalIncome": 4745795947
+  },
+  {
+   "key": "a:16084801178",
+   "name": "HANCOCK VICTORIAN PLANTATIONS HOLDINGS PTY LIMITED",
+   "years": 11,
+   "totalIncome": 4586930925
+  },
+  {
+   "key": "a:50003902985",
+   "name": "NORSKE SKOG INDUSTRIES AUSTRALIA LIMITED",
+   "years": 11,
+   "totalIncome": 4506484050
+  },
+  {
+   "key": "a:86001217527",
+   "name": "NEC AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 4422475898
+  },
+  {
+   "key": "a:52122486195",
+   "name": "NEXANS AUSTRALIA HOLDING PTY LTD",
+   "years": 11,
+   "totalIncome": 4288879141
+  },
+  {
+   "key": "a:94141385293",
+   "name": "ARROW ENERGY HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 4247140283
+  },
+  {
+   "key": "a:35136072627",
+   "name": "AQUASURE FINANCE PTY LTD",
+   "years": 11,
+   "totalIncome": 4152692035
+  },
+  {
+   "key": "a:85009193695",
+   "name": "PERILYA LIMITED",
+   "years": 11,
+   "totalIncome": 3689399499
+  },
+  {
+   "key": "a:15126578176",
+   "name": "HINDMARSH CONSTRUCTION AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 3664477583
+  },
+  {
+   "key": "a:37156629211",
+   "name": "MP AUSTRALIA HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 3580421203
+  },
+  {
+   "key": "a:30147131977",
+   "name": "AERIS RESOURCES LIMITED",
+   "years": 11,
+   "totalIncome": 3579429517
+  },
+  {
+   "key": "a:52425663385",
+   "name": "GERALDTON FISHERMEN'S CO-OPERATIVE LTD",
+   "years": 11,
+   "totalIncome": 3500702443
+  },
+  {
+   "key": "a:42000016099",
+   "name": "AUSTRALASIAN PERFORMING RIGHT ASSOCIATION LIMITED",
+   "years": 11,
+   "totalIncome": 3472974727
+  },
+  {
+   "key": "a:69088347602",
+   "name": "FRIENDLY SOCIETY MEDICAL ASSOCIATION LIMITED",
+   "years": 11,
+   "totalIncome": 3229754259
+  },
+  {
+   "key": "a:14074319396",
+   "name": "HUDSON HIGHLAND (APAC) PTY LIMITED",
+   "years": 11,
+   "totalIncome": 3224035103
+  },
+  {
+   "key": "a:30142129342",
+   "name": "HANCOCK QUEENSLAND PLANTATIONS PTY LTD",
+   "years": 11,
+   "totalIncome": 3088474258
+  },
+  {
+   "key": "a:99003010099",
+   "name": "FUGRO HOLDINGS (AUSTRALIA) PTY LTD",
+   "years": 11,
+   "totalIncome": 3042660226
+  },
+  {
+   "key": "a:33154789321",
+   "name": "FRESHMAX GROUP PTY LIMITED",
+   "years": 11,
+   "totalIncome": 2922242274
+  },
+  {
+   "key": "a:49124818113",
+   "name": "NYRSTAR HOBART PTY LTD",
+   "years": 11,
+   "totalIncome": 2795695770
+  },
+  {
+   "key": "a:45058277491",
+   "name": "LLOYD HELICOPTER SERVICES PTY LTD",
+   "years": 11,
+   "totalIncome": 2793786368
+  },
+  {
+   "key": "a:54068215341",
+   "name": "THE NUANCE GROUP (AUSTRALIA) PTY LTD",
+   "years": 11,
+   "totalIncome": 2716954984
+  },
+  {
+   "key": "a:70005146350",
+   "name": "SPICERS LIMITED",
+   "years": 11,
+   "totalIncome": 2711158829
+  },
+  {
+   "key": "a:90114757783",
+   "name": "VICINITY LIMITED",
+   "years": 11,
+   "totalIncome": 2508828186
+  },
+  {
+   "key": "a:72000264979",
+   "name": "DOW CHEMICAL (AUSTRALIA) PTY LTD",
+   "years": 11,
+   "totalIncome": 2470299270
+  },
+  {
+   "key": "a:37008670102",
+   "name": "COVENTRY GROUP LTD",
+   "years": 11,
+   "totalIncome": 2439490080
+  },
+  {
+   "key": "a:28095466961",
+   "name": "BOOM LOGISTICS LIMITED",
+   "years": 11,
+   "totalIncome": 2197038499
+  },
+  {
+   "key": "a:42004520030",
+   "name": "ASSOCIATED RETAILERS LIMITED",
+   "years": 11,
+   "totalIncome": 2148423252
+  },
+  {
+   "key": "a:92000565579",
+   "name": "BRISTOW HELICOPTERS AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 2140956330
+  },
+  {
+   "key": "a:48143785522",
+   "name": "AUSTRALIAN COMFORT GROUP HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 2117917920
+  },
+  {
+   "key": "a:30147835452",
+   "name": "LANCO RESOURCES AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 1940120797
+  },
+  {
+   "key": "a:26101464073",
+   "name": "HYSTER-YALE AUSTRALIA HOLDING PTY LTD",
+   "years": 11,
+   "totalIncome": 1837142258
+  },
+  {
+   "key": "a:98000458622",
+   "name": "MOUNT PRICHARD & DISTRICT COMMUNITY CLUB LIMITED",
+   "years": 11,
+   "totalIncome": 1734708436
+  },
+  {
+   "key": "a:74124892879",
+   "name": "INTERTEK AUSTRALIA HOLDINGS PTY LTD",
+   "years": 11,
+   "totalIncome": 1732872619
+  },
+  {
+   "key": "a:78091701825",
+   "name": "ETSA UTILITIES FINANCE PTY LTD",
+   "years": 11,
+   "totalIncome": 1652138028
+  },
+  {
+   "key": "a:93106034879",
+   "name": "BLUEWATERS POWER 1 PTY LTD",
+   "years": 11,
+   "totalIncome": 1518780381
+  },
+  {
+   "key": "a:82005579840",
+   "name": "UACJ AUSTRALIA PTY LTD",
+   "years": 11,
+   "totalIncome": 1501409363
+  },
+  {
+   "key": "a:29004513188",
+   "name": "DOW PERFORMANCE MATERIALS (AUSTRALIA) PTY LTD",
+   "years": 11,
+   "totalIncome": 1462479555
+  },
+  {
+   "key": "a:28142591044",
+   "name": "CNOOC GAS AND POWER (AUS) INVESTMENT PTY LTD",
+   "years": 10,
+   "totalIncome": 16284285871
+  },
+  {
+   "key": "a:17103181675",
+   "name": "HOCHTIEF AUSTRALIA HOLDINGS LIMITED",
+   "years": 10,
+   "totalIncome": 12939195184
+  },
+  {
+   "key": "a:18165056360",
+   "name": "SYDNEY AIRPORT LIMITED",
+   "years": 10,
+   "totalIncome": 11015389416
+  },
+  {
+   "key": "a:65000000359",
+   "name": "BURNS PHILP AND CO PTY LIMITED",
+   "years": 10,
+   "totalIncome": 8563324281
+  },
+  {
+   "key": "a:62086026968",
+   "name": "QENOS HOLDINGS PTY LTD",
+   "years": 10,
+   "totalIncome": 7225962402
+  },
+  {
+   "key": "a:64169090804",
+   "name": "TRANSURBAN QUEENSLAND HOLDINGS 1 PTY LTD",
+   "years": 10,
+   "totalIncome": 6297641189
+  },
+  {
+   "key": "a:99001588209",
+   "name": "MILLER POHANG COAL COMPANY PTY LTD",
+   "years": 10,
+   "totalIncome": 5452539029
+  },
+  {
+   "key": "a:78003630055",
+   "name": "NORCO WHOLESALERS PTY LTD",
+   "years": 10,
+   "totalIncome": 5334213413
+  },
+  {
+   "key": "a:11169154572",
+   "name": "MOY INVESTMENT PTY LTD",
+   "years": 10,
+   "totalIncome": 5106246402
+  },
+  {
+   "key": "a:76010485588",
+   "name": "NAMOI COTTON LIMITED",
+   "years": 10,
+   "totalIncome": 4594861465
+  },
+  {
+   "key": "a:18143300985",
+   "name": "GE POWER HOLDINGS AUSTRALIA PTY LTD",
+   "years": 10,
+   "totalIncome": 4246083705
+  },
+  {
+   "key": "a:40123078688",
+   "name": "ETIHAD AIRWAYS PJSC",
+   "years": 10,
+   "totalIncome": 3457560570
+  },
+  {
+   "key": "a:49123052728",
+   "name": "BOART LONGYEAR PTY LIMITED",
+   "years": 10,
+   "totalIncome": 3371056949
+  },
+  {
+   "key": "a:88127662257",
+   "name": "CONSOLIDATED MINERALS HOLDINGS (AUSTRALIA) PTY LTD",
+   "years": 10,
+   "totalIncome": 3238950352
+  },
+  {
+   "key": "a:24167119020",
+   "name": "PUMA ENERGY (AUSTRALIA) ASSETS HOLDINGS PTY LTD",
+   "years": 10,
+   "totalIncome": 2928322139
+  },
+  {
+   "key": "a:25110150055",
+   "name": "METALS X LIMITED",
+   "years": 10,
+   "totalIncome": 2886625897
+  },
+  {
+   "key": "a:78156458981",
+   "name": "NORTHROP GRUMMAN AUSTRALIA PTY LIMITED",
+   "years": 10,
+   "totalIncome": 2882588945
+  },
+  {
+   "key": "a:39105051616",
+   "name": "IBERDROLA AUSTRALIA LIMITED",
+   "years": 10,
+   "totalIncome": 2805833209
+  },
+  {
+   "key": "a:52692964098",
+   "name": "ALUMINA & BAUXITE COMPANY LTD",
+   "years": 10,
+   "totalIncome": 2339042013
+  },
+  {
+   "key": "a:44119436083",
+   "name": "YELLOW BRICK ROAD HOLDINGS LIMITED",
+   "years": 10,
+   "totalIncome": 2178209778
+  },
+  {
+   "key": "a:42001872215",
+   "name": "HYDRO ALUMINIUM AUSTRALIA PTY LTD",
+   "years": 10,
+   "totalIncome": 2178164221
+  },
+  {
+   "key": "a:27009423858",
+   "name": "CBH RESOURCES LIMITED",
+   "years": 10,
+   "totalIncome": 2123886208
+  },
+  {
+   "key": "a:99120432144",
+   "name": "ENGENCO LIMITED",
+   "years": 10,
+   "totalIncome": 1650936915
+  },
+  {
+   "key": "a:18092812023",
+   "name": "ENI AUSTRALIA B.V.",
+   "years": 10,
+   "totalIncome": 1602849848
+  },
+  {
+   "key": "a:12060309104",
+   "name": "AJ LUCAS GROUP LIMITED",
+   "years": 10,
+   "totalIncome": 1478109397
+  },
+  {
+   "key": "a:84159406523",
+   "name": "ALLEGIS GROUP APAC HOLDINGS PTY LTD",
+   "years": 10,
+   "totalIncome": 1475033502
+  },
+  {
+   "key": "a:43002724334",
+   "name": "IGNITE LIMITED",
+   "years": 10,
+   "totalIncome": 1411103505
+  },
+  {
+   "key": "a:57000578398",
+   "name": "PENRITH RUGBY LEAGUE CLUB LTD",
+   "years": 10,
+   "totalIncome": 1201252170
+  },
+  {
+   "key": "a:50084642571",
+   "name": "CHARTERED ACCOUNTANTS AUSTRALIA AND NEW ZEALAND",
+   "years": 10,
+   "totalIncome": 1128168897
+  },
+  {
+   "key": "a:95603555988",
+   "name": "CCCI AUSTRALIA PTY LTD",
+   "years": 9,
+   "totalIncome": 44326832184
+  },
+  {
+   "key": "a:39603486844",
+   "name": "GENERAL MOTORS HOLDINGS AUSTRALIA PTY LTD",
+   "years": 9,
+   "totalIncome": 18413763126
+  },
+  {
+   "key": "a:91153348111",
+   "name": "TRONOX LIMITED",
+   "years": 9,
+   "totalIncome": 10985106879
+  },
+  {
+   "key": "a:33105617865",
+   "name": "MURRAY AND ROBERTS PTY LTD",
+   "years": 9,
+   "totalIncome": 9346524093
+  },
+  {
+   "key": "a:42130065682",
+   "name": "KOGAS AUSTRALIA PTY LTD",
+   "years": 9,
+   "totalIncome": 8309796618
+  },
+  {
+   "key": "a:26131210001",
+   "name": "WICET HOLDINGS PTY LTD",
+   "years": 9,
+   "totalIncome": 5811142834
+  },
+  {
+   "key": "a:77136613075",
+   "name": "FQM AUSTRALIA HOLDINGS PTY LTD",
+   "years": 9,
+   "totalIncome": 3883578748
+  },
+  {
+   "key": "a:50152631082",
+   "name": "INTERNET SERVICES AUSTRALIA 1 PTY LTD",
+   "years": 9,
+   "totalIncome": 3752069451
+  },
+  {
+   "key": "a:88122531631",
+   "name": "KUWAIT PETROLEUM AVIATION (AUSTRALIA) PTY LIMITED",
+   "years": 9,
+   "totalIncome": 3664949843
+  },
+  {
+   "key": "a:85004820419",
+   "name": "ALUMINA LIMITED",
+   "years": 9,
+   "totalIncome": 3331004592
+  },
+  {
+   "key": "a:37097393112",
+   "name": "RIVALEA HOLDINGS PTY LTD",
+   "years": 9,
+   "totalIncome": 3230475011
+  },
+  {
+   "key": "a:20091136195",
+   "name": "QUIKSILVER AUSTRALIA PTY LTD",
+   "years": 9,
+   "totalIncome": 2951793275
+  },
+  {
+   "key": "a:46611080534",
+   "name": "TETRA TECH COFFEY HOLDING PTY LTD",
+   "years": 9,
+   "totalIncome": 2784777899
+  },
+  {
+   "key": "a:35007573417",
+   "name": "HILLS LIMITED",
+   "years": 9,
+   "totalIncome": 2708933231
+  },
+  {
+   "key": "a:59081037274",
+   "name": "AUSGROUP COMPANIES PTY LTD",
+   "years": 9,
+   "totalIncome": 2701606071
+  },
+  {
+   "key": "a:71008550865",
+   "name": "ENERGY RESOURCES OF AUSTRALIA LTD",
+   "years": 9,
+   "totalIncome": 2670504049
+  },
+  {
+   "key": "a:36159521338",
+   "name": "HEINEMANN OCEANIA PTY LTD",
+   "years": 9,
+   "totalIncome": 2544935014
+  },
+  {
+   "key": "a:48098788062",
+   "name": "TTC CONSOL PTY LIMITED",
+   "years": 9,
+   "totalIncome": 2459508384
+  },
+  {
+   "key": "a:25169518325",
+   "name": "MONDE NISSIN (AUSTRALIA) PTY LTD",
+   "years": 9,
+   "totalIncome": 2391190403
+  },
+  {
+   "key": "a:99296784351",
+   "name": "INGENIA COMMUNITIES MANAGEMENT TRUST",
+   "years": 9,
+   "totalIncome": 2335107887
+  },
+  {
+   "key": "a:38142687554",
+   "name": "JG KING BUILDING GROUP PTY LTD",
+   "years": 9,
+   "totalIncome": 2189728759
+  },
+  {
+   "key": "a:44122951099",
+   "name": "UNIVERSAL PICTURES INTERNATIONAL AUSTRALASIA PTY LTD",
+   "years": 9,
+   "totalIncome": 2057146434
+  },
+  {
+   "key": "a:25103697703",
+   "name": "RIVERINA OILS & BIO ENERGY PTY LIMITED",
+   "years": 9,
+   "totalIncome": 1893021549
+  },
+  {
+   "key": "a:20079066407",
+   "name": "NANDO'S AUSTRALIA PTY LTD",
+   "years": 9,
+   "totalIncome": 1809336914
+  },
+  {
+   "key": "a:86602042339",
+   "name": "VINCI ENERGIES AUSTRALIA PTY LTD",
+   "years": 9,
+   "totalIncome": 1535942546
+  },
+  {
+   "key": "a:31114541114",
+   "name": "AUSENCO PTY LTD",
+   "years": 9,
+   "totalIncome": 1461492745
+  },
+  {
+   "key": "a:53001228799",
+   "name": "COPYRIGHT AGENCY LIMITED",
+   "years": 9,
+   "totalIncome": 1245736889
+  },
+  {
+   "key": "a:60078480136",
+   "name": "AUSTIN ENGINEERING LIMITED",
+   "years": 9,
+   "totalIncome": 1176153405
+  },
+  {
+   "key": "a:43118791772",
+   "name": "SINO IRON HOLDINGS PTY LTD",
+   "years": 8,
+   "totalIncome": 22659819321
+  },
+  {
+   "key": "a:26147978890",
+   "name": "CHEVRON AUSTRALIA PRODUCTS PTY LIMITED",
+   "years": 8,
+   "totalIncome": 20775739496
+  },
+  {
+   "key": "a:28611628909",
+   "name": "AUSTRALIAN LOGISTICS ACQUISITION HOLDINGS PTY LTD",
+   "years": 8,
+   "totalIncome": 20101233958
+  },
+  {
+   "key": "a:11602975619",
+   "name": "TOTALENERGIES EP HOLDINGS AUSTRALIA PTY LTD",
+   "years": 8,
+   "totalIncome": 15843845959
+  },
+  {
+   "key": "a:25064998867",
+   "name": "PETRONAS AUSTRALIA PTY LIMITED",
+   "years": 8,
+   "totalIncome": 10195900798
+  },
+  {
+   "key": "a:39050148644",
+   "name": "OVATO LIMITED",
+   "years": 8,
+   "totalIncome": 5519449272
+  },
+  {
+   "key": "a:30002060059",
+   "name": "OWENS-ILLINOIS HOLDING (AUSTRALIA) PTY LTD",
+   "years": 8,
+   "totalIncome": 5392183256
+  },
+  {
+   "key": "a:57000479514",
+   "name": "CATHAY PACIFIC AIRWAYS LIMITED",
+   "years": 8,
+   "totalIncome": 4465810924
+  },
+  {
+   "key": "a:83615449548",
+   "name": "AUSGRID MANAGEMENT PTY LTD",
+   "years": 8,
+   "totalIncome": 4454308561
+  },
+  {
+   "key": "a:50614113192",
+   "name": "FITNESS AND LIFESTYLE GROUP TOPCO PTY LTD",
+   "years": 8,
+   "totalIncome": 3572892381
+  },
+  {
+   "key": "a:54605702618",
+   "name": "BAPSH PTY LTD",
+   "years": 8,
+   "totalIncome": 3545694490
+  },
+  {
+   "key": "a:14615343005",
+   "name": "AUSGRID FINANCE PTY LTD",
+   "years": 8,
+   "totalIncome": 3497615416
+  },
+  {
+   "key": "a:37609497494",
+   "name": "EQUIFAX AUSTRALIA HOLDINGS PTY LTD",
+   "years": 8,
+   "totalIncome": 3289910954
+  },
+  {
+   "key": "a:70092916811",
+   "name": "SIBELCO ASIA PACIFIC PTY LIMITED",
+   "years": 8,
+   "totalIncome": 3289194499
+  },
+  {
+   "key": "a:58605889843",
+   "name": "TJX AUSTRALIA HOLDING COMPANY PTY LTD",
+   "years": 8,
+   "totalIncome": 3240152458
+  },
+  {
+   "key": "a:83143337722",
+   "name": "MASTERCARD AUSTRALIA HOLDING PTY LTD",
+   "years": 8,
+   "totalIncome": 2573447630
+  },
+  {
+   "key": "a:78089434220",
+   "name": "WBHO INFRASTRUCTURE PTY LTD",
+   "years": 8,
+   "totalIncome": 2430538151
+  },
+  {
+   "key": "a:99000528281",
+   "name": "J. CORDINA INVESTMENTS PTY LTD",
+   "years": 8,
+   "totalIncome": 2314071159
+  },
+  {
+   "key": "a:49103575042",
+   "name": "TYRO PAYMENTS LIMITED",
+   "years": 8,
+   "totalIncome": 2176724544
+  },
+  {
+   "key": "a:66609171913",
+   "name": "NSW ELECTRICITY NETWORKS FINANCE PTY LTD",
+   "years": 8,
+   "totalIncome": 2163006504
+  },
+  {
+   "key": "a:79607717206",
+   "name": "PACIFIC HUNTER GROUP PTY LTD",
+   "years": 8,
+   "totalIncome": 2101625319
+  },
+  {
+   "key": "a:63006868033",
+   "name": "MINMETALS AUSTRALIA PTY LTD",
+   "years": 8,
+   "totalIncome": 2058600796
+  },
+  {
+   "key": "a:35143582521",
+   "name": "NEXTDC LIMITED",
+   "years": 8,
+   "totalIncome": 2027755842
+  },
+  {
+   "key": "a:96832035151",
+   "name": "TOTALENERGIES EP AUSTRALIA",
+   "years": 8,
+   "totalIncome": 1846371880
+  },
+  {
+   "key": "a:72114818825",
+   "name": "BG INTERNATIONAL LIMITED",
+   "years": 8,
+   "totalIncome": 1760921251
+  },
+  {
+   "key": "a:73140534256",
+   "name": "MAULES CREEK MARKETING PTY LTD",
+   "years": 8,
+   "totalIncome": 1529621153
+  },
+  {
+   "key": "a:18147998230",
+   "name": "CELSUS SECURITISATION PTY LTD",
+   "years": 8,
+   "totalIncome": 1485551176
+  },
+  {
+   "key": "a:75148920665",
+   "name": "HILLSIDE (AUSTRALIA NEW MEDIA) PTY LIMITED",
+   "years": 8,
+   "totalIncome": 1341245885
+  },
+  {
+   "key": "a:34167517660",
+   "name": "NEP-GTV HOLDCO PTY LTD",
+   "years": 8,
+   "totalIncome": 1327934008
+  },
+  {
+   "key": "a:22057776888",
+   "name": "GRAPHIC PACKAGING INTERNATIONAL AUSTRALIA PTY LTD",
+   "years": 8,
+   "totalIncome": 1326507496
+  },
+  {
+   "key": "a:50008942827",
+   "name": "SENEX ENERGY LIMITED",
+   "years": 8,
+   "totalIncome": 1190808453
+  },
+  {
+   "key": "a:42004939771",
+   "name": "DRAKE AUSTRALIA PTY LTD",
+   "years": 8,
+   "totalIncome": 1145300243
+  },
+  {
+   "key": "a:43157779961",
+   "name": "KWIKFORM ACQUISITION HOLDINGS PTY LIMITED",
+   "years": 8,
+   "totalIncome": 992674617
+  },
+  {
+   "key": "a:80122958178",
+   "name": "VERIS LIMITED",
+   "years": 8,
+   "totalIncome": 891182507
+  },
+  {
+   "key": "a:85625190990",
+   "name": "NXE AUSTRALIA PTY LIMITED",
+   "years": 7,
+   "totalIncome": 18006237688
+  },
+  {
+   "key": "a:69081089170",
+   "name": "CONOCOPHILLIPS AUSTRALIA GAS HOLDINGS PTY LTD",
+   "years": 7,
+   "totalIncome": 10612357883
+  },
+  {
+   "key": "a:94138990593",
+   "name": "HMC CAPITAL LIMITED",
+   "years": 7,
+   "totalIncome": 7549076757
+  },
+  {
+   "key": "a:41617774017",
+   "name": "PROJECT QUILL I PTY LTD",
+   "years": 7,
+   "totalIncome": 5479107335
+  },
+  {
+   "key": "a:20125123784",
+   "name": "TRONOX AUSTRALIND PTY LTD",
+   "years": 7,
+   "totalIncome": 4694783095
+  },
+  {
+   "key": "a:37144013801",
+   "name": "BOUYGUES CONSTRUCTION AUSTRALIA PTY LTD",
+   "years": 7,
+   "totalIncome": 4470250225
+  },
+  {
+   "key": "a:67612332073",
+   "name": "CDC GROUP HOLDINGS PTY LTD",
+   "years": 7,
+   "totalIncome": 3943929580
+  },
+  {
+   "key": "a:28010729950",
+   "name": "AVEO GROUP LIMITED",
+   "years": 7,
+   "totalIncome": 3158743569
+  },
+  {
+   "key": "a:78622116992",
+   "name": "TOPCO INVESTMENTS AUSTRALIA PTY LIMITED",
+   "years": 7,
+   "totalIncome": 3135222437
+  },
+  {
+   "key": "a:48622481752",
+   "name": "BIS INDUSTRIES HOLDINGS LIMITED",
+   "years": 7,
+   "totalIncome": 2784147529
+  },
+  {
+   "key": "a:47615611759",
+   "name": "GRINDING MEDIA PTY LTD",
+   "years": 7,
+   "totalIncome": 2649857728
+  },
+  {
+   "key": "a:43124171759",
+   "name": "MINERVA FINANCIAL GROUP PTY LIMITED",
+   "years": 7,
+   "totalIncome": 2355451907
+  },
+  {
+   "key": "a:11002724638",
+   "name": "SALMAT LIMITED",
+   "years": 7,
+   "totalIncome": 2320931512
+  },
+  {
+   "key": "a:74134686525",
+   "name": "PTTEP AUSTRALIA PERTH PTY LTD",
+   "years": 7,
+   "totalIncome": 2295621568
+  },
+  {
+   "key": "a:86142911233",
+   "name": "MC RESOURCES AUSTRALIA PTY LTD",
+   "years": 7,
+   "totalIncome": 2287349236
+  },
+  {
+   "key": "a:88143533322",
+   "name": "SHELL ENERGY OPERATIONS NO. 2 PTY LTD",
+   "years": 7,
+   "totalIncome": 2250820576
+  },
+  {
+   "key": "a:62958405971",
+   "name": "REDCAPE HOTEL TRUST II",
+   "years": 7,
+   "totalIncome": 2213610122
+  },
+  {
+   "key": "a:22617221495",
+   "name": "ENDEAVOUR ENERGY NETWORK MANAGEMENT PTY LTD",
+   "years": 7,
+   "totalIncome": 2141712827
+  },
+  {
+   "key": "a:78073257379",
+   "name": "OFFICEMAX INTERNATIONAL PTY LTD",
+   "years": 7,
+   "totalIncome": 2084023144
+  },
+  {
+   "key": "a:38163240408",
+   "name": "GREENLAND (AUSTRALIA) INVESTMENT PTY LIMITED",
+   "years": 7,
+   "totalIncome": 2067457121
+  },
+  {
+   "key": "a:39097088689",
+   "name": "RESOLUTE MINING LIMITED",
+   "years": 7,
+   "totalIncome": 1820445027
+  },
+  {
+   "key": "a:67083984187",
+   "name": "INDORAMA VENTURES OXIDES AUSTRALIA PTY LTD",
+   "years": 7,
+   "totalIncome": 1659453364
+  },
+  {
+   "key": "a:55134604176",
+   "name": "GAIF 4-1 BORROWER COMPANY PTY LIMITED",
+   "years": 7,
+   "totalIncome": 1568942778
+  },
+  {
+   "key": "a:53602567546",
+   "name": "MYSALE GROUP PLC",
+   "years": 7,
+   "totalIncome": 1417499325
+  },
+  {
+   "key": "a:72097663431",
+   "name": "HIAB AUSTRALIA PTY LTD",
+   "years": 7,
+   "totalIncome": 1222641061
+  },
+  {
+   "key": "a:84616407777",
+   "name": "BARTO INDUSTRY CO PTY LTD",
+   "years": 7,
+   "totalIncome": 1116493352
+  },
+  {
+   "key": "a:67164517104",
+   "name": "PON HOLDING AUSTRALIA PTY LTD",
+   "years": 7,
+   "totalIncome": 1091078788
+  },
+  {
+   "key": "a:73004297116",
+   "name": "HILLGROVE RESOURCES LTD",
+   "years": 7,
+   "totalIncome": 1031905901
+  },
+  {
+   "key": "a:54164391128",
+   "name": "BRAVURA SOLUTIONS LIMITED",
+   "years": 7,
+   "totalIncome": 1021756056
+  },
+  {
+   "key": "a:27011019088",
+   "name": "MATRAD PTY LTD",
+   "years": 7,
+   "totalIncome": 1001155423
+  },
+  {
+   "key": "a:83001076142",
+   "name": "FREMANTLEMEDIA AUSTRALIA HOLDINGS PTY LIMITED",
+   "years": 7,
+   "totalIncome": 942633695
+  },
+  {
+   "key": "a:33082026551",
+   "name": "CSG INTERNATIONAL PTY LTD",
+   "years": 7,
+   "totalIncome": 893751425
+  },
+  {
+   "key": "a:42150217299",
+   "name": "ICHTHYS LNG PTY LTD",
+   "years": 6,
+   "totalIncome": 43204499733
+  },
+  {
+   "key": "a:63004410833",
+   "name": "A.C.N 004 410 833 LIMITED (IN LIQUIDATION)",
+   "years": 6,
+   "totalIncome": 20782136152
+  },
+  {
+   "key": "a:92050397110",
+   "name": "VENNOR INVESTMENTS PTY LTD",
+   "years": 6,
+   "totalIncome": 10568131626
+  },
+  {
+   "key": "a:98010562562",
+   "name": "WATPAC LIMITED",
+   "years": 6,
+   "totalIncome": 6497418890
+  },
+  {
+   "key": "a:53158341612",
+   "name": "PE WHEATSTONE PTY LTD",
+   "years": 6,
+   "totalIncome": 4139987018
+  },
+  {
+   "key": "a:98004325562",
+   "name": "MEMART INVESTMENTS PTY LTD",
+   "years": 6,
+   "totalIncome": 3888319133
+  },
+  {
+   "key": "a:95002255183",
+   "name": "YOLARNO PTY LTD",
+   "years": 6,
+   "totalIncome": 3840904837
+  },
+  {
+   "key": "a:43166293849",
+   "name": "BIS INDUSTRIES GROUP PTY LIMITED",
+   "years": 6,
+   "totalIncome": 3194310084
+  },
+  {
+   "key": "a:50625199322",
+   "name": "AMPHORA AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 2803312362
+  },
+  {
+   "key": "a:82057931334",
+   "name": "LOYALTY PACIFIC PTY LTD",
+   "years": 6,
+   "totalIncome": 2522942705
+  },
+  {
+   "key": "a:76080049145",
+   "name": "PA PACIFIC PTY LIMITED",
+   "years": 6,
+   "totalIncome": 2408759631
+  },
+  {
+   "key": "a:55081022228",
+   "name": "BATCHFIRE CALLIDE PTY LTD",
+   "years": 6,
+   "totalIncome": 2112895150
+  },
+  {
+   "key": "a:66155097242",
+   "name": "IOR SUPPLY AND TRADING PTY LTD",
+   "years": 6,
+   "totalIncome": 1937499130
+  },
+  {
+   "key": "a:73068647610",
+   "name": "VAULT MINERALS LIMITED",
+   "years": 6,
+   "totalIncome": 1930198404
+  },
+  {
+   "key": "a:66008603487",
+   "name": "OPIC AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 1916922976
+  },
+  {
+   "key": "a:54159519810",
+   "name": "LIGHTING INVESTMENTS AUSTRALIA HOLDINGS PTY LTD",
+   "years": 6,
+   "totalIncome": 1565786421
+  },
+  {
+   "key": "a:55603274237",
+   "name": "TSG AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 1447633719
+  },
+  {
+   "key": "a:49093246381",
+   "name": "OSAKA GAS AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 1398848621
+  },
+  {
+   "key": "a:47166966114",
+   "name": "DEVELOPER GROUP HOLDINGS PTY LTD",
+   "years": 6,
+   "totalIncome": 1390174612
+  },
+  {
+   "key": "a:58616101341",
+   "name": "PARK24 AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 1321915091
+  },
+  {
+   "key": "a:17608552496",
+   "name": "ABSOLUTE EQUITY PERFORMANCE FUND LIMITED",
+   "years": 6,
+   "totalIncome": 1258262746
+  },
+  {
+   "key": "a:43620427116",
+   "name": "TOMRA CLEANAWAY PTY LIMITED",
+   "years": 6,
+   "totalIncome": 1190139609
+  },
+  {
+   "key": "a:83134351134",
+   "name": "LAKE WOOD HOLDINGS PTY LIMITED",
+   "years": 6,
+   "totalIncome": 1140234680
+  },
+  {
+   "key": "a:82146482591",
+   "name": "VOYAGES INDIGENOUS TOURISM AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 1139799335
+  },
+  {
+   "key": "a:49071292567",
+   "name": "INVESTEC HOLDINGS AUSTRALIA LIMITED",
+   "years": 6,
+   "totalIncome": 1079914856
+  },
+  {
+   "key": "a:35081031432",
+   "name": "NTT AUSTRALIA SOLUTIONS PTY LTD",
+   "years": 6,
+   "totalIncome": 1073697719
+  },
+  {
+   "key": "a:94134845364",
+   "name": "ENDEMOL SHINE AUSTRALIA HOLDINGS PTY LTD",
+   "years": 6,
+   "totalIncome": 1004698558
+  },
+  {
+   "key": "a:61150498098",
+   "name": "NQXT PORT PTY LTD",
+   "years": 6,
+   "totalIncome": 986443685
+  },
+  {
+   "key": "a:31106617332",
+   "name": "RATCH-AUSTRALIA CORPORATION PTY LTD",
+   "years": 6,
+   "totalIncome": 985899551
+  },
+  {
+   "key": "a:52050539501",
+   "name": "PUMA AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 872131391
+  },
+  {
+   "key": "a:48138978631",
+   "name": "DORAY MINERALS LIMITED",
+   "years": 6,
+   "totalIncome": 857828017
+  },
+  {
+   "key": "a:32169392876",
+   "name": "VEOLIA WATER TECHNOLOGIES & SOLUTIONS PROCESS AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 838408712
+  },
+  {
+   "key": "a:70128997526",
+   "name": "LIBERTYTOWN AUSTRALIA PTY LTD",
+   "years": 6,
+   "totalIncome": 737708784
+  },
+  {
+   "key": "a:13165572761",
+   "name": "IRI (APAC HOLDINGS) PTY LTD",
+   "years": 6,
+   "totalIncome": 678220776
+  },
+  {
+   "key": "a:20631014965",
+   "name": "ANZ HOSPITALS TOPCO PTY LTD",
+   "years": 5,
+   "totalIncome": 12005207614
+  },
+  {
+   "key": "a:74609542556",
+   "name": "BRS HOLDCO PTY LTD",
+   "years": 5,
+   "totalIncome": 11923101641
+  },
+  {
+   "key": "a:86638301649",
+   "name": "OTR 330 PTY LTD",
+   "years": 5,
+   "totalIncome": 7202500990
+  },
+  {
+   "key": "a:52604351966",
+   "name": "KAJIMA AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 5303117000
+  },
+  {
+   "key": "a:48629502843",
+   "name": "BESIX AUSTRALIA HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 5288776371
+  },
+  {
+   "key": "a:41000495269",
+   "name": "TNT AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 4706065069
+  },
+  {
+   "key": "a:13618935069",
+   "name": "C0001 PTY LTD",
+   "years": 5,
+   "totalIncome": 4636988810
+  },
+  {
+   "key": "a:36635012323",
+   "name": "HYDRA RL TOPCO PTY LTD",
+   "years": 5,
+   "totalIncome": 3885860520
+  },
+  {
+   "key": "a:64142352234",
+   "name": "WINC AUSTRALIA HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 3669102712
+  },
+  {
+   "key": "a:71631941403",
+   "name": "MARRON GROUP HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 3396080791
+  },
+  {
+   "key": "a:67152097875",
+   "name": "HORIZON ROADS PTY LTD",
+   "years": 5,
+   "totalIncome": 3141330543
+  },
+  {
+   "key": "a:67085675467",
+   "name": "GE CAPITAL AUSTRALIA FUNDING PTY LTD",
+   "years": 5,
+   "totalIncome": 2833021781
+  },
+  {
+   "key": "a:17084923946",
+   "name": "BILLABONG INTERNATIONAL LIMITED",
+   "years": 5,
+   "totalIncome": 2788510608
+  },
+  {
+   "key": "a:53156406138",
+   "name": "KJTC PTY LTD",
+   "years": 5,
+   "totalIncome": 2551021197
+  },
+  {
+   "key": "a:63112797403",
+   "name": "RIO DOCE AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 2540681532
+  },
+  {
+   "key": "a:20601251067",
+   "name": "KINETIC TCO PTY LTD",
+   "years": 5,
+   "totalIncome": 2315246126
+  },
+  {
+   "key": "a:56103359299",
+   "name": "ACCOLADE WINES HOLDINGS AUSTRALIA PTY LIMITED",
+   "years": 5,
+   "totalIncome": 2270176778
+  },
+  {
+   "key": "a:23630725825",
+   "name": "MYOB GROUP CO PTY LTD",
+   "years": 5,
+   "totalIncome": 2240572030
+  },
+  {
+   "key": "a:42096909634",
+   "name": "BARALABA COAL COMPANY PTY LTD",
+   "years": 5,
+   "totalIncome": 2108238841
+  },
+  {
+   "key": "a:88149683312",
+   "name": "SERVICENOW AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 2070605683
+  },
+  {
+   "key": "a:30636456623",
+   "name": "AMPLIFY BIDCO PTY LTD",
+   "years": 5,
+   "totalIncome": 1925324563
+  },
+  {
+   "key": "a:75622581935",
+   "name": "DRA GLOBAL LIMITED",
+   "years": 5,
+   "totalIncome": 1894316250
+  },
+  {
+   "key": "a:82148964890",
+   "name": "GROCON GROUP HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 1849735307
+  },
+  {
+   "key": "a:86637044092",
+   "name": "CAPITAL SMART GROUP HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 1666474545
+  },
+  {
+   "key": "a:63135918491",
+   "name": "TOPLACE PTY LTD",
+   "years": 5,
+   "totalIncome": 1602869314
+  },
+  {
+   "key": "a:43092237968",
+   "name": "GLOBAL BLUE CURRENCY CHOICE AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 1594390928
+  },
+  {
+   "key": "a:52605645547",
+   "name": "JUST EAT (ACQUISITIONS) PTY LIMITED",
+   "years": 5,
+   "totalIncome": 1592983103
+  },
+  {
+   "key": "a:65624154089",
+   "name": "WCX STATE WORKS CONTRACTOR PTY LTD",
+   "years": 5,
+   "totalIncome": 1564026084
+  },
+  {
+   "key": "a:99101213263",
+   "name": "CONNECTEAST PTY LTD",
+   "years": 5,
+   "totalIncome": 1551810876
+  },
+  {
+   "key": "a:50139546428",
+   "name": "ZIP CO LIMITED",
+   "years": 5,
+   "totalIncome": 1506386845
+  },
+  {
+   "key": "a:39164131855",
+   "name": "COMMERCIAL METALS PTY LTD",
+   "years": 5,
+   "totalIncome": 1472586008
+  },
+  {
+   "key": "a:55615020409",
+   "name": "SAI GLOBAL HOLDINGS II(AUSTRALIA) PTY LIMITED",
+   "years": 5,
+   "totalIncome": 1406841737
+  },
+  {
+   "key": "a:32629791153",
+   "name": "NATIONAL GROUP CORPORATION PTY LTD",
+   "years": 5,
+   "totalIncome": 1398742884
+  },
+  {
+   "key": "a:41126825769",
+   "name": "SOLARIS PAPER PTY LTD",
+   "years": 5,
+   "totalIncome": 1294029821
+  },
+  {
+   "key": "a:54161652955",
+   "name": "TSGA HOLDCO PTY LIMITED",
+   "years": 5,
+   "totalIncome": 1212127408
+  },
+  {
+   "key": "a:96169263094",
+   "name": "SUPERLOOP LIMITED",
+   "years": 5,
+   "totalIncome": 1180716314
+  },
+  {
+   "key": "a:34098742628",
+   "name": "BRAND COLLECTIVE PTY LTD",
+   "years": 5,
+   "totalIncome": 1113310127
+  },
+  {
+   "key": "a:54152417260",
+   "name": "KYUSHU ELECTRIC AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 1092106579
+  },
+  {
+   "key": "a:57070045117",
+   "name": "ASG GROUP LIMITED",
+   "years": 5,
+   "totalIncome": 1088854626
+  },
+  {
+   "key": "a:54628455103",
+   "name": "GUARDIAN ALPHABET HOLDCO PTY LTD",
+   "years": 5,
+   "totalIncome": 1071230387
+  },
+  {
+   "key": "a:75603289792",
+   "name": "RA (HOLDINGS) 2014 PTY LTD",
+   "years": 5,
+   "totalIncome": 1038701122
+  },
+  {
+   "key": "a:61154262978",
+   "name": "DACIAN GOLD LIMITED",
+   "years": 5,
+   "totalIncome": 997167666
+  },
+  {
+   "key": "a:45117763443",
+   "name": "METRO MINING LIMITED",
+   "years": 5,
+   "totalIncome": 992321114
+  },
+  {
+   "key": "a:27088345804",
+   "name": "HAZELL BROS GROUP PTY LTD",
+   "years": 5,
+   "totalIncome": 973753272
+  },
+  {
+   "key": "a:13625648722",
+   "name": "PROSPA GROUP LTD",
+   "years": 5,
+   "totalIncome": 955037182
+  },
+  {
+   "key": "a:64625761962",
+   "name": "ESR REAL ESTATE (AUSTRALIA) PTY LTD",
+   "years": 5,
+   "totalIncome": 939463782
+  },
+  {
+   "key": "a:13614209880",
+   "name": "NEMO (BC) HOLDCO PTY LTD",
+   "years": 5,
+   "totalIncome": 938391899
+  },
+  {
+   "key": "a:20107689878",
+   "name": "CHINOVA RESOURCES PTY LTD",
+   "years": 5,
+   "totalIncome": 907257159
+  },
+  {
+   "key": "a:46080156378",
+   "name": "MRC GLOBAL AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 880347903
+  },
+  {
+   "key": "a:63104702614",
+   "name": "REMA TIP TOP ASIA PACIFIC PTY LTD",
+   "years": 5,
+   "totalIncome": 874187659
+  },
+  {
+   "key": "a:69155392911",
+   "name": "RINCON AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 868359478
+  },
+  {
+   "key": "a:11119200592",
+   "name": "ARTICORE GROUP LIMITED",
+   "years": 5,
+   "totalIncome": 810587630
+  },
+  {
+   "key": "a:81073569696",
+   "name": "EMIRATES AIRLINE",
+   "years": 5,
+   "totalIncome": 783438225
+  },
+  {
+   "key": "a:70009937160",
+   "name": "UNIVERSITY CO-OPERATIVE BOOKSHOP LIMITED",
+   "years": 5,
+   "totalIncome": 731869292
+  },
+  {
+   "key": "a:77169840555",
+   "name": "R&F DEVELOPMENT HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 730654389
+  },
+  {
+   "key": "a:35137006109",
+   "name": "HASSAD AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 717240755
+  },
+  {
+   "key": "a:97622522445",
+   "name": "HVO SERVICES PTY LTD",
+   "years": 5,
+   "totalIncome": 713437592
+  },
+  {
+   "key": "a:20114932311",
+   "name": "VLI PTY LTD",
+   "years": 5,
+   "totalIncome": 697408702
+  },
+  {
+   "key": "a:27124077738",
+   "name": "THE JEWELLERY GROUP HOLDINGS PTY LTD",
+   "years": 5,
+   "totalIncome": 659684922
+  },
+  {
+   "key": "a:85003257556",
+   "name": "MILLENNIUM MINERALS LIMITED",
+   "years": 5,
+   "totalIncome": 633483798
+  },
+  {
+   "key": "a:64123989631",
+   "name": "CSG LIMITED",
+   "years": 5,
+   "totalIncome": 595583571
+  },
+  {
+   "key": "a:36000024108",
+   "name": "MCWILLIAM'S WINES GROUP LTD",
+   "years": 5,
+   "totalIncome": 581208190
+  },
+  {
+   "key": "a:98002951877",
+   "name": "TEVA PHARMACEUTICALS AUSTRALIA PTY LTD",
+   "years": 5,
+   "totalIncome": 561041210
+  },
+  {
+   "key": "a:81090503843",
+   "name": "EMPIRED LIMITED",
+   "years": 5,
+   "totalIncome": 558929739
+  },
+  {
+   "key": "a:15637003662",
+   "name": "CHEVRON AUSTRALIA DOWNSTREAM HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 24029952139
+  },
+  {
+   "key": "a:44609420420",
+   "name": "BHP (AUS) DDS PTY LTD",
+   "years": 4,
+   "totalIncome": 11312109644
+  },
+  {
+   "key": "a:17125851167",
+   "name": "SAB AUSTRALIA PTY LIMITED",
+   "years": 4,
+   "totalIncome": 8720364539
+  },
+  {
+   "key": "a:28141253787",
+   "name": "CONOCOPHILLIPS AUSTRALIA OPERATIONS PTY LTD",
+   "years": 4,
+   "totalIncome": 8575562748
+  },
+  {
+   "key": "a:85009180287",
+   "name": "UGL PTY LIMITED",
+   "years": 4,
+   "totalIncome": 6478361789
+  },
+  {
+   "key": "a:19631490447",
+   "name": "SWISS RE ASIA PTE. LTD",
+   "years": 4,
+   "totalIncome": 6289736135
+  },
+  {
+   "key": "a:81008898486",
+   "name": "RCR TOMLINSON LTD",
+   "years": 4,
+   "totalIncome": 4323267700
+  },
+  {
+   "key": "a:83105221967",
+   "name": "LOAN MARKET GROUP PTY LTD",
+   "years": 4,
+   "totalIncome": 4140506249
+  },
+  {
+   "key": "a:40003400217",
+   "name": "CHINATEX (AUSTRALIA) PTY LTD",
+   "years": 4,
+   "totalIncome": 3149041654
+  },
+  {
+   "key": "a:27145455205",
+   "name": "ADANI MINING PTY LTD",
+   "years": 4,
+   "totalIncome": 2735270952
+  },
+  {
+   "key": "a:52124369008",
+   "name": "TIGER AIRWAYS AUSTRALIA PTY LIMITED",
+   "years": 4,
+   "totalIncome": 1912641853
+  },
+  {
+   "key": "a:11622763919",
+   "name": "TIANQI LITHIUM HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 1889356369
+  },
+  {
+   "key": "a:16642854313",
+   "name": "VRG HOLDCO PTY LTD",
+   "years": 4,
+   "totalIncome": 1877637195
+  },
+  {
+   "key": "a:59003964154",
+   "name": "TOYOTA TSUSHO INVESTMENT (AUSTRALIA) PTY LTD",
+   "years": 4,
+   "totalIncome": 1740385885
+  },
+  {
+   "key": "a:27637083544",
+   "name": "LINEAGE AP HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 1548708279
+  },
+  {
+   "key": "a:69081609190",
+   "name": "DBNGP (WA) TRANSMISSION PTY LTD",
+   "years": 4,
+   "totalIncome": 1537120780
+  },
+  {
+   "key": "a:27115390488",
+   "name": "MORGAN PASTORAL PTY LTD",
+   "years": 4,
+   "totalIncome": 1393890310
+  },
+  {
+   "key": "a:84123230259",
+   "name": "IPMG PTY LTD",
+   "years": 4,
+   "totalIncome": 1376437298
+  },
+  {
+   "key": "a:73751308908",
+   "name": "GLOBAL DIVERSIFIED INFRASTRUCTURE FUND (ACTIVE)",
+   "years": 4,
+   "totalIncome": 1345026150
+  },
+  {
+   "key": "a:17148151213",
+   "name": "MILLELL PTY LTD",
+   "years": 4,
+   "totalIncome": 1335851901
+  },
+  {
+   "key": "a:74633381218",
+   "name": "KARORA RESOURCES PTY LTD",
+   "years": 4,
+   "totalIncome": 1332556287
+  },
+  {
+   "key": "a:53607708190",
+   "name": "WELLARD LIMITED",
+   "years": 4,
+   "totalIncome": 1314187702
+  },
+  {
+   "key": "a:95141267469",
+   "name": "METRO PROPERTY DEVELOPMENT PTY LTD",
+   "years": 4,
+   "totalIncome": 1284143923
+  },
+  {
+   "key": "a:70155120728",
+   "name": "TRONOX AUSTRALIA PIGMENTS HOLDINGS PTY LIMITED",
+   "years": 4,
+   "totalIncome": 1280501673
+  },
+  {
+   "key": "a:71156445984",
+   "name": "CAYDON GROUP HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 1251057104
+  },
+  {
+   "key": "a:47095792288",
+   "name": "PANORAMIC RESOURCES LTD",
+   "years": 4,
+   "totalIncome": 1203723594
+  },
+  {
+   "key": "a:48636677088",
+   "name": "DDH1 LIMITED",
+   "years": 4,
+   "totalIncome": 1180993052
+  },
+  {
+   "key": "a:53142165080",
+   "name": "NEW CENTURY RESOURCES LTD",
+   "years": 4,
+   "totalIncome": 1175489081
+  },
+  {
+   "key": "a:23629193764",
+   "name": "PEXA GROUP LIMITED",
+   "years": 4,
+   "totalIncome": 1113136831
+  },
+  {
+   "key": "a:57168277101",
+   "name": "AGREX AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 1100421737
+  },
+  {
+   "key": "a:75115316599",
+   "name": "SINO GAS & ENERGY PTY LIMITED",
+   "years": 4,
+   "totalIncome": 1059880027
+  },
+  {
+   "key": "a:77057455026",
+   "name": "TOYS 'R' US (AUSTRALIA) PTY LTD",
+   "years": 4,
+   "totalIncome": 1058575947
+  },
+  {
+   "key": "a:65068671938",
+   "name": "FOXTEL MANAGEMENT PTY LTD",
+   "years": 4,
+   "totalIncome": 1025993371
+  },
+  {
+   "key": "a:51010769365",
+   "name": "DEVINE LIMITED",
+   "years": 4,
+   "totalIncome": 991983968
+  },
+  {
+   "key": "a:20611228221",
+   "name": "PERTH ENERGY HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 987707040
+  },
+  {
+   "key": "n:RECO INDFUND PRIVATE LIMITED",
+   "name": "RECO INDFUND PRIVATE LIMITED",
+   "years": 4,
+   "totalIncome": 977757816
+  },
+  {
+   "key": "a:16123749655",
+   "name": "SEAROAD HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 962025172
+  },
+  {
+   "key": "a:23138831455",
+   "name": "AMEC FOSTER WHEELER AUSTRALIA HOLDING COMPANY PTY LTD",
+   "years": 4,
+   "totalIncome": 958165896
+  },
+  {
+   "key": "a:61140174189",
+   "name": "UNITED MALT GROUP PTY LIMITED",
+   "years": 4,
+   "totalIncome": 934608897
+  },
+  {
+   "key": "a:56164915655",
+   "name": "VICTORIA INTERNATIONAL CONTAINER TERMINAL LIMITED",
+   "years": 4,
+   "totalIncome": 851150825
+  },
+  {
+   "key": "a:70077897440",
+   "name": "AWE LIMITED",
+   "years": 4,
+   "totalIncome": 842156257
+  },
+  {
+   "key": "a:15002617736",
+   "name": "FREYSSINET AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 808502995
+  },
+  {
+   "key": "a:93096170295",
+   "name": "AMPLITUDE ENERGY LIMITED",
+   "years": 4,
+   "totalIncome": 771477834
+  },
+  {
+   "key": "a:35121104167",
+   "name": "TRANSATLANTIC EXPLORATION MEDITERRANEAN INTERNATIONAL PTY LTD",
+   "years": 4,
+   "totalIncome": 759963448
+  },
+  {
+   "key": "a:50154271780",
+   "name": "SIRROM CORPORATION GROUP PTY LTD",
+   "years": 4,
+   "totalIncome": 743929479
+  },
+  {
+   "key": "a:18615894794",
+   "name": "EQUANS ANZ HOLDINGS PTY LIMITED",
+   "years": 4,
+   "totalIncome": 728058183
+  },
+  {
+   "key": "a:14110721072",
+   "name": "DBNGP FINANCE CO PTY LTD",
+   "years": 4,
+   "totalIncome": 699245143
+  },
+  {
+   "key": "a:70006211052",
+   "name": "MAERSK LOGISTICS & SERVICES AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 673788741
+  },
+  {
+   "key": "a:11071976442",
+   "name": "GALAXY RESOURCES LIMITED",
+   "years": 4,
+   "totalIncome": 672915036
+  },
+  {
+   "key": "a:84602964143",
+   "name": "SUMO AUSTRALIA LIMITED",
+   "years": 4,
+   "totalIncome": 671704768
+  },
+  {
+   "key": "a:81001662648",
+   "name": "MINGARA RECREATION CLUB LTD",
+   "years": 4,
+   "totalIncome": 670326143
+  },
+  {
+   "key": "a:11454629109",
+   "name": "THE TRUSTEE FOR QIC GLOBAL INFRASTRUCTURE FUND TAYLOR AIV TRUST",
+   "years": 4,
+   "totalIncome": 647121295
+  },
+  {
+   "key": "a:60121594858",
+   "name": "YUANDA AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 642964393
+  },
+  {
+   "key": "a:18630698716",
+   "name": "A.C.N. 630 698 716 PTY LTD",
+   "years": 4,
+   "totalIncome": 633000371
+  },
+  {
+   "key": "a:13635578960",
+   "name": "INDORAMA VENTURES HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 610300162
+  },
+  {
+   "key": "a:13004484351",
+   "name": "NATIONAL MUTUAL INTERNATIONAL PTY LTD",
+   "years": 4,
+   "totalIncome": 594286616
+  },
+  {
+   "key": "a:65133358068",
+   "name": "INFRASHORE FINANCE PTY LIMITED",
+   "years": 4,
+   "totalIncome": 591381798
+  },
+  {
+   "key": "a:97600594125",
+   "name": "AOYUAN PROPERTY GROUP (AUSTRALIA) PTY LIMITED",
+   "years": 4,
+   "totalIncome": 582996255
+  },
+  {
+   "key": "a:71009448793",
+   "name": "P G HOLDINGS LTD",
+   "years": 4,
+   "totalIncome": 582073255
+  },
+  {
+   "key": "a:73607915640",
+   "name": "DELIVEROO AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 573188005
+  },
+  {
+   "key": "a:52099032667",
+   "name": "CORNING AUSTRALIA HOLDINGS CO PTY LTD",
+   "years": 4,
+   "totalIncome": 568324737
+  },
+  {
+   "key": "a:28603023383",
+   "name": "BESTON GLOBAL FOOD COMPANY LIMITED",
+   "years": 4,
+   "totalIncome": 549636811
+  },
+  {
+   "key": "a:74166129915",
+   "name": "FAR EAST LAND (AUSTRALIA) PTY LTD",
+   "years": 4,
+   "totalIncome": 542182579
+  },
+  {
+   "key": "a:68617861677",
+   "name": "STAHMANN HOLDINGS PTY LTD",
+   "years": 4,
+   "totalIncome": 537579494
+  },
+  {
+   "key": "a:34118630461",
+   "name": "WR CARPENTER NO 1 PTY LTD",
+   "years": 4,
+   "totalIncome": 535624499
+  },
+  {
+   "key": "a:42000837472",
+   "name": "KINGSGATE CONSOLIDATED LIMITED",
+   "years": 4,
+   "totalIncome": 529685459
+  },
+  {
+   "key": "a:95147695225",
+   "name": "ACTAVIS PHARMA PTY LTD",
+   "years": 4,
+   "totalIncome": 528691699
+  },
+  {
+   "key": "a:18119887606",
+   "name": "WILUNA MINING CORPORATION LIMITED",
+   "years": 4,
+   "totalIncome": 528042075
+  },
+  {
+   "key": "a:91138053755",
+   "name": "MEDIA INNOVATIONS PTE LIMITED",
+   "years": 4,
+   "totalIncome": 519196783
+  },
+  {
+   "key": "a:27126649947",
+   "name": "HUTCHISON PORTS AUSTRALIA PTY LIMITED",
+   "years": 4,
+   "totalIncome": 508416781
+  },
+  {
+   "key": "a:52000218655",
+   "name": "PARRAMATTA LEAGUES CLUB LIMITED",
+   "years": 4,
+   "totalIncome": 503102950
+  },
+  {
+   "key": "a:25607522510",
+   "name": "WEWORK AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 491732415
+  },
+  {
+   "key": "a:83005812671",
+   "name": "WEYHILL PTY LTD",
+   "years": 4,
+   "totalIncome": 488545399
+  },
+  {
+   "key": "a:26103964629",
+   "name": "FUJI XEROX ASIA PACIFIC PTE LTD",
+   "years": 4,
+   "totalIncome": 477133164
+  },
+  {
+   "key": "a:74160164616",
+   "name": "SINOCHEM INTERNATIONAL AUSTRALIA PTY LTD",
+   "years": 4,
+   "totalIncome": 475073147
+  },
+  {
+   "key": "a:86601035121",
+   "name": "HASTINGS CO-OP LIMITED",
+   "years": 4,
+   "totalIncome": 429331993
+  },
+  {
+   "key": "a:24862057747",
+   "name": "TIANQI LITHIUM ENERGY AUSTRALIA PTY LTD",
+   "years": 3,
+   "totalIncome": 12184171294
+  },
+  {
+   "key": "a:85103162956",
+   "name": "GENERAL MOTORS AUSTRALIA LTD",
+   "years": 3,
+   "totalIncome": 10357307070
+  },
+  {
+   "key": "a:99126164163",
+   "name": "BHCA PTY LIMITED",
+   "years": 3,
+   "totalIncome": 9914941527
+  },
+  {
+   "key": "a:99615290849",
+   "name": "ABI AUSTRALIA HOLDING PTY LTD",
+   "years": 3,
+   "totalIncome": 8888033771
+  },
+  {
+   "key": "a:69000484417",
+   "name": "BROADSPECTRUM LIMITED",
+   "years": 3,
+   "totalIncome": 8616335336
+  },
+  {
+   "key": "a:15084157666",
+   "name": "TEAM GLOBAL EXPRESS PTY LTD",
+   "years": 3,
+   "totalIncome": 7306047771
+  },
+  {
+   "key": "a:31648328803",
+   "name": "VOYAGE AUSTRALIA HOLDINGS PTY LIMITED",
+   "years": 3,
+   "totalIncome": 5023188053
+  },
+  {
+   "key": "a:75000074573",
+   "name": "DAVID JONES PTY LIMITED",
+   "years": 3,
+   "totalIncome": 5009726179
+  },
+  {
+   "key": "a:45078590682",
+   "name": "CNPR LIMITED",
+   "years": 3,
+   "totalIncome": 4680762291
+  },
+  {
+   "key": "a:52148012471",
+   "name": "ALINTA HOLDINGS",
+   "years": 3,
+   "totalIncome": 4216609398
+  },
+  {
+   "key": "a:63124509619",
+   "name": "ALINTA POWER CAT PTY LTD",
+   "years": 3,
+   "totalIncome": 3821014253
+  },
+  {
+   "key": "a:66654198268",
+   "name": "APOG TOPCO PTY LTD",
+   "years": 3,
+   "totalIncome": 3598488953
+  },
+  {
+   "key": "a:37108788245",
+   "name": "AUSNET SERVICES (DISTRIBUTION) LTD",
+   "years": 3,
+   "totalIncome": 2926426104
+  },
+  {
+   "key": "a:64644660882",
+   "name": "SUPERANNUATION AND INVESTMENTS HOLDCO PTY LIMITED",
+   "years": 3,
+   "totalIncome": 2541593876
+  },
+  {
+   "key": "a:60097092316",
+   "name": "STATE ONE HOLDINGS PTY LTD",
+   "years": 3,
+   "totalIncome": 2530602830
+  },
+  {
+   "key": "a:20649347302",
+   "name": "RECYCLE AND RESOURCE HOLDINGS LIMITED",
+   "years": 3,
+   "totalIncome": 2198036944
+  },
+  {
+   "key": "a:67001990209",
+   "name": "UNITED COLLIERIES PTY LIMITED",
+   "years": 3,
+   "totalIncome": 2188955574
+  },
+  {
+   "key": "a:37655131561",
+   "name": "GLASSHOUSE GROUP HOLDINGS PTY LTD",
+   "years": 3,
+   "totalIncome": 2124165465
+  },
+  {
+   "key": "a:53629739402",
+   "name": "BENGERANG NO. 1 PTY LTD",
+   "years": 3,
+   "totalIncome": 2097364979
+  },
+  {
+   "key": "a:86156354068",
+   "name": "MCALEESE LIMITED",
+   "years": 3,
+   "totalIncome": 2007638377
+  },
+  {
+   "key": "a:86158955885",
+   "name": "SALINI AUSTRALIA PTY LTD",
+   "years": 3,
+   "totalIncome": 1955216403
+  },
+  {
+   "key": "a:14054117921",
+   "name": "QNI RESOURCES PTY LTD",
+   "years": 3,
+   "totalIncome": 1858974179
+  },
+  {
+   "key": "a:38649860177",
+   "name": "PACIFIC 2021 TOPCO G PTY LIMITED",
+   "years": 3,
+   "totalIncome": 1799935331
+  },
+  {
+   "key": "a:95650096094",
+   "name": "29METALS LIMITED",
+   "years": 3,
+   "totalIncome": 1730253174
+  }
+ ],
+ "anchors": [
+  {
+   "year": "2022-23",
+   "entities": 3985,
+   "total": 3138400000000,
+   "taxable": 380100000000,
+   "payable": 97900000000,
+   "citation": "ATO, \"About the Corporate tax transparency report 2022-23\" — 3,985 entities, $3,138.4b total income, $380.1b taxable income, $97.9b tax payable."
+  },
+  {
+   "year": "2023-24",
+   "entities": 4110,
+   "total": 3278800000000,
+   "taxable": 365500000000,
+   "payable": 95700000000,
+   "citation": "ATO, \"About the Corporate tax transparency report 2023-24\" — 4,110 entities, $3,278.8b total income, $365.5b taxable income, $95.7b tax payable."
+  }
+ ],
+ "gates": [
+  {
+   "id": "years",
+   "title": "All eleven income years are present and populated",
+   "ok": true,
+   "detail": "2013-14: 1909, 2014-15: 1984, 2015-16: 2095, 2016-17: 2146, 2017-18: 2254, 2018-19: 2375, 2019-20: 2421, 2020-21: 2527, 2021-22: 2776, 2022-23: 4064, 2023-24: 4110"
+  },
+  {
+   "id": "triple-count-guard",
+   "title": "The Combined-sheet guard is load-bearing",
+   "ok": true,
+   "detail": "reading every 2013-14 sheet yields 3741 rows; reading only Combined yields 1859. The guard suppresses a duplicate read of the first year."
+  },
+  {
+   "id": "no-duplicate-cells",
+   "title": "No entity holds two rows for one income year",
+   "ok": true,
+   "detail": "0 duplicated entity-year cells"
+  },
+  {
+   "id": "no-phantom-entity",
+   "title": "Blank-ABN rows stay separate entities",
+   "ok": true,
+   "detail": "240 source rows have no ABN and resolve to 119 distinct entities (at least 22 required; keying on ABN alone would collapse them into one)."
+  },
+  {
+   "id": "prior-year-routing",
+   "title": "Prior-year amendments are routed to their own income year",
+   "ok": true,
+   "detail": "552 rows carry an income year earlier than the workbook that ships them"
+  },
+  {
+   "id": "no-future-rows",
+   "title": "No row post-dates the workbook that published it",
+   "ok": true,
+   "detail": "0 offending rows"
+  },
+  {
+   "id": "money-finite",
+   "title": "Every money value is finite and non-negative",
+   "ok": true,
+   "detail": "0 offending values"
+  },
+  {
+   "id": "threshold-break",
+   "title": "The 2022-23 reporting-threshold cut shows as a population break",
+   "ok": true,
+   "detail": "entities reported: 2021-22 2776 → 2022-23 4064 (+46.4%). Counts must never be trended across this boundary unqualified."
+  },
+  {
+   "id": "stable-cohort-continuous",
+   "title": "The $200m+ cohort is continuous across the threshold change",
+   "ok": true,
+   "detail": "$200m+ entities: 2021-22 2018 → 2022-23 2203 (9.2% change — under 15% means comparable)"
+  },
+  {
+   "id": "anchor-2022-23",
+   "title": "2022-23 exceeds its as-published figures by a bounded amount (amendments)",
+   "ok": true,
+   "detail": "panel holds 4064 entities / $3160.5b income / $98.3b tax; the ATO published 3985 / $3138.4b / $97.9b at the time. Growth of +79 entities is late lodgers and amendments arriving in later reports — it must be positive and small."
+  },
+  {
+   "id": "anchor-2023-24",
+   "title": "2023-24 matches the ATO's published headline figures exactly",
+   "ok": true,
+   "detail": "parsed 4110 entities / $3278.8b income / $95.7b tax payable; ATO published 4110 / $3278.8b / $95.7b."
+  },
+  {
+   "id": "taxable-divergence-2022-23",
+   "title": "2022-23: the known taxable-income divergence is within its expected band",
+   "ok": true,
+   "detail": "summing the published column gives $405.0b against the ATO's stated $380.1b — 6.5% higher. Expected: consistently 3-12% higher. This is a documented property of the source, not a parse error; total income and tax payable reconcile exactly in the same year."
+  },
+  {
+   "id": "taxable-divergence-2023-24",
+   "title": "2023-24: the known taxable-income divergence is within its expected band",
+   "ok": true,
+   "detail": "summing the published column gives $394.2b against the ATO's stated $365.5b — 7.8% higher. Expected: consistently 3-12% higher. This is a documented property of the source, not a parse error; total income and tax payable reconcile exactly in the same year."
+  },
+  {
+   "id": "sector-coverage",
+   "title": "The sector classifier covers most of the tax base by value",
+   "ok": true,
+   "detail": "39.3% of entities and 84.8% of tax payable are classified (the remainder is shown as Unclassified, never hidden)."
+  }
+ ],
+ "gatesPassed": 14,
+ "gatesTotal": 14,
+ "source": {
+  "dataset": "Corporate Tax Transparency",
+  "landing": "https://data.gov.au/data/dataset/corporate-transparency",
+  "licence": "Creative Commons Attribution 3.0 Australia",
+  "publisher": "Australian Taxation Office",
+  "metadataModified": "2025-10-01T21:08:32.777041",
+  "resources": [
+   {
+    "year": "2013-14",
+    "name": "2013-14 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/237d7ede-3a63-4b9b-9434-2f79b9d70ce8/download/2013-14corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2014-15",
+    "name": "2014-15 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/1e8c8ae0-81d1-4780-a669-9e4a2a6ba1a4/download/2014-15-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2015-16",
+    "name": "2015-16 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/b84c2b8d-c595-4219-987d-fc1add7f00f0/download/2015-16-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2016-17",
+    "name": "2016-17 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/5eb443b4-d0bb-4a88-a189-4523dbcd7f15/download/2016-17-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2017-18",
+    "name": "2017-18 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/69b1061c-3769-48bd-b5a1-05e725543f6c/download/2017-18-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2018-19",
+    "name": "2018-19 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/827f68ea-83c0-440e-bb6d-4118644b7efd/download/2018-19-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2019-20",
+    "name": "2019-20 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/db83e667-819f-41f3-a8b7-fcb13366105b/download/2019-20-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2020-21",
+    "name": "2020-21 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/80a01133-4281-43ce-b5ef-5535d61e1c1f/download/2020-21-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2021-22",
+    "name": "2021-22 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/6eaf8203-a79b-43f0-9671-feeb1a44cbff/download/2021-22-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2022-23",
+    "name": "2022-23 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/3281f733-6f53-431b-84f5-d824c6bd9e60/download/2022-23-corporate-report-of-entity-tax-information.xlsx"
+   },
+   {
+    "year": "2023-24",
+    "name": "2023-24 Report of Entity Tax Information",
+    "url": "https://data.gov.au/data/dataset/c2524c87-cea4-4636-acac-599a82048a26/resource/491b366b-aa6f-4b1c-b39d-cebaeeb6f874/download/2023-24-corporate-report-of-entity-tax-information.xlsx"
+   }
+  ]
+ }
+}
